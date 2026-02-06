@@ -103,7 +103,7 @@
   </g>
 
   <!-- Stats -->
-  <text x="400" y="445" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="12">39 Specialists • 7 Orchestrators • All Opus-Powered</text>
+  <text x="400" y="445" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="12">75 Specialists • 11 Orchestrators • All Opus-Powered</text>
 
   <!-- Footer -->
   <rect x="300" y="465" width="200" height="25" rx="12" fill="#1e1b4b"/>

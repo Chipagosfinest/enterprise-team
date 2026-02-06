@@ -85,5 +85,5 @@
 
   <!-- Bottom badge -->
   <rect x="300" y="425" width="200" height="20" rx="10" fill="#1e1b4b"/>
-  <text x="400" y="439" text-anchor="middle" fill="#a5b4fc" font-family="system-ui" font-size="10">39 Specialists • Zero Guesswork</text>
+  <text x="400" y="439" text-anchor="middle" fill="#a5b4fc" font-family="system-ui" font-size="10">75 Specialists • 10 Departments • Zero Guesswork</text>
 </svg>
