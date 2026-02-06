@@ -49,7 +49,7 @@ You have Claude Code. You have skills. But when you say "build me a feature," wh
 ## How It Works
 
 <p align="center">
-  <img src="assets/architecture.svg" alt="Enterprise Team Architecture" width="100%"/>
+  <img src="assets/architecture.jpg" alt="Enterprise Team Architecture" width="100%"/>
 </p>
 
 ### Two-Layer Routing
