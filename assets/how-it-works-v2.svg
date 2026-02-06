@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0a1d"/>
+      <stop offset="100%" stop-color="#1a1333"/>
+    </linearGradient>
+    <linearGradient id="funnelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg2)"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#f8fafc" font-family="system-ui" font-size="24" font-weight="700" filter="url(#glow2)">One Input. Right Expert. Every Time.</text>
+
+  <!-- Request Bubbles at top -->
+  <g transform="translate(400, 90)">
+    <rect x="-180" y="-20" width="100" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="-130" y="-1" text-anchor="middle" fill="#e2e8f0" font-family="system-ui" font-size="10">"Build API"</text>
+
+    <rect x="-70" y="-25" width="110" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="-15" y="-6" text-anchor="middle" fill="#e2e8f0" font-family="system-ui" font-size="10">"Design page"</text>
+
+    <rect x="50" y="-20" width="130" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="115" y="-1" text-anchor="middle" fill="#e2e8f0" font-family="system-ui" font-size="10">"Launch strategy"</text>
+  </g>
+
+  <!-- Funnel/Orchestrator -->
+  <g transform="translate(400, 180)">
+    <!-- Funnel shape -->
+    <path d="M-120 0 L120 0 L80 80 L-80 80 Z" fill="url(#funnelGrad)" filter="url(#glow2)"/>
+
+    <!-- Brain icon (simple) -->
+    <circle cx="0" cy="30" r="25" fill="#a78bfa" opacity="0.3"/>
+    <text x="0" y="35" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="24">🧠</text>
+
+    <text x="0" y="65" text-anchor="middle" fill="#e9d5ff" font-family="system-ui" font-size="10" font-weight="600">ENTERPRISE ORCHESTRATOR</text>
+  </g>
+
+  <!-- Colored streams coming out -->
+  <g transform="translate(400, 260)">
+    <!-- Lines to departments -->
+    <line x1="-60" y1="0" x2="-200" y2="80" stroke="#3b82f6" stroke-width="3" opacity="0.8"/>
+    <line x1="-30" y1="0" x2="-80" y2="80" stroke="#f97316" stroke-width="3" opacity="0.8"/>
+    <line x1="0" y1="0" x2="0" y2="80" stroke="#ec4899" stroke-width="3" opacity="0.8"/>
+    <line x1="30" y1="0" x2="80" y2="80" stroke="#06b6d4" stroke-width="3" opacity="0.8"/>
+    <line x1="60" y1="0" x2="200" y2="80" stroke="#22c55e" stroke-width="3" opacity="0.8"/>
+  </g>
+
+  <!-- Department boxes -->
+  <g transform="translate(0, 340)">
+    <!-- Engineering -->
+    <g transform="translate(120, 0)">
+      <rect x="0" y="0" width="100" height="70" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="50" y="20" text-anchor="middle" fill="#93c5fd" font-family="system-ui" font-size="10" font-weight="600">ENGINEERING</text>
+      <text x="50" y="35" text-anchor="middle" fill="#60a5fa" font-family="system-ui" font-size="18">⚙️</text>
+      <text x="50" y="55" text-anchor="middle" fill="#bfdbfe" font-family="system-ui" font-size="8">9 specialists</text>
+      <text x="50" y="65" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="7">Backend, Frontend...</text>
+    </g>
+
+    <!-- Infrastructure -->
+    <g transform="translate(240, 0)">
+      <rect x="0" y="0" width="100" height="70" rx="8" fill="#431407" stroke="#f97316" stroke-width="2"/>
+      <text x="50" y="20" text-anchor="middle" fill="#fdba74" font-family="system-ui" font-size="10" font-weight="600">INFRA</text>
+      <text x="50" y="35" text-anchor="middle" fill="#fb923c" font-family="system-ui" font-size="18">🖥️</text>
+      <text x="50" y="55" text-anchor="middle" fill="#fed7aa" font-family="system-ui" font-size="8">4 specialists</text>
+      <text x="50" y="65" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="7">DevOps, SRE...</text>
+    </g>
+
+    <!-- Product -->
+    <g transform="translate(350, 0)">
+      <rect x="0" y="0" width="100" height="70" rx="8" fill="#500724" stroke="#ec4899" stroke-width="2"/>
+      <text x="50" y="20" text-anchor="middle" fill="#f9a8d4" font-family="system-ui" font-size="10" font-weight="600">PRODUCT</text>
+      <text x="50" y="35" text-anchor="middle" fill="#f472b6" font-family="system-ui" font-size="18">🎨</text>
+      <text x="50" y="55" text-anchor="middle" fill="#fbcfe8" font-family="system-ui" font-size="8">3 specialists</text>
+      <text x="50" y="65" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="7">PM, UX, UI...</text>
+    </g>
+
+    <!-- Data -->
+    <g transform="translate(460, 0)">
+      <rect x="0" y="0" width="100" height="70" rx="8" fill="#083344" stroke="#06b6d4" stroke-width="2"/>
+      <text x="50" y="20" text-anchor="middle" fill="#67e8f9" font-family="system-ui" font-size="10" font-weight="600">DATA</text>
+      <text x="50" y="35" text-anchor="middle" fill="#22d3ee" font-family="system-ui" font-size="18">📊</text>
+      <text x="50" y="55" text-anchor="middle" fill="#a5f3fc" font-family="system-ui" font-size="8">4 specialists</text>
+      <text x="50" y="65" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="7">Engineer, Analyst...</text>
+    </g>
+
+    <!-- Business -->
+    <g transform="translate(580, 0)">
+      <rect x="0" y="0" width="100" height="70" rx="8" fill="#14532d" stroke="#22c55e" stroke-width="2"/>
+      <text x="50" y="20" text-anchor="middle" fill="#86efac" font-family="system-ui" font-size="10" font-weight="600">BUSINESS</text>
+      <text x="50" y="35" text-anchor="middle" fill="#4ade80" font-family="system-ui" font-size="18">💼</text>
+      <text x="50" y="55" text-anchor="middle" fill="#bbf7d0" font-family="system-ui" font-size="8">12 specialists</text>
+      <text x="50" y="65" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="7">Sales, Legal, HR...</text>
+    </g>
+  </g>
+
+  <!-- Stats -->
+  <text x="400" y="445" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="12">39 Specialists • 7 Orchestrators • All Opus-Powered</text>
+
+  <!-- Footer -->
+  <rect x="300" y="465" width="200" height="25" rx="12" fill="#1e1b4b"/>
+  <text x="400" y="482" text-anchor="middle" fill="#a5b4fc" font-family="system-ui" font-size="11">Zero Guesswork Required</text>
+</svg>

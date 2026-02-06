@@ -1,15 +1,15 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Claude_Code-Plugin-blueviolet?style=for-the-badge" alt="Claude Code Plugin"/>
-  <img src="https://img.shields.io/badge/Agents-39-green?style=for-the-badge" alt="39 Agents"/>
+  <img src="https://img.shields.io/badge/Agents-75-green?style=for-the-badge" alt="75 Agents"/>
+  <img src="https://img.shields.io/badge/Departments-10-blue?style=for-the-badge" alt="10 Departments"/>
   <img src="https://img.shields.io/badge/Model-Opus-purple?style=for-the-badge" alt="Opus Powered"/>
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License"/>
 </p>
 
 <h1 align="center">Enterprise Team</h1>
 
 <p align="center">
   <strong>Hire a whole company with one plugin.</strong><br/>
-  39 specialized AI agents across Engineering, Product, Infrastructure, Data, Security, and Business.
+  75 specialized AI agents across Engineering, Product, Infrastructure, Data, Security, Marketing, Sales, Finance, Legal, and People.
 </p>
 
 <p align="center">
@@ -51,22 +51,26 @@ Then just ask for what you need:
 "Set up CI/CD with GitHub Actions"
 "Create a financial model for our Q2 projections"
 "Review this code for security vulnerabilities"
+"Plan our product launch campaign"
 ```
 
 ---
 
 ## Departments & Specialists
 
-### Engineering (9 specialists)
+### Engineering (10 specialists)
 | Specialist | Expertise |
 |------------|-----------|
 | `backend-engineer` | APIs, Node.js, Python, PostgreSQL, REST, GraphQL |
 | `frontend-engineer` | React, Vue, TypeScript, CSS, accessibility |
+| `fullstack-engineer` | End-to-end development across all layers |
 | `mobile-developer` | iOS, Android, React Native, Flutter |
+| `embedded-engineer` | Firmware, IoT, C/C++, microcontrollers |
+| `blockchain-engineer` | Smart contracts, Solidity, Web3, DeFi |
 | `ml-developer` | PyTorch, TensorFlow, ML pipelines |
-| `technical-writer` | Documentation, API docs, tutorials |
 | `solutions-architect` | System design, architecture decisions |
 | `qa-engineer` | Testing, test automation, quality assurance |
+| `technical-writer` | Documentation, API docs, tutorials |
 
 ### Infrastructure (4 specialists)
 | Specialist | Expertise |
@@ -76,14 +80,16 @@ Then just ask for what you need:
 | `database-engineer` | PostgreSQL, Supabase, migrations |
 | `systems-admin` | Linux, Windows Server, cloud admin |
 
-### Product (3 specialists)
+### Product (5 specialists)
 | Specialist | Expertise |
 |------------|-----------|
 | `product-manager` | Roadmaps, prioritization, PRDs |
 | `ux-researcher` | User interviews, personas, testing |
 | `ui-designer` | Visual design, design systems |
+| `design-strategist` | Design systems, experience strategy |
+| `instructional-designer` | Learning design, course development |
 
-### Data (4 specialists)
+### Data (3 specialists)
 | Specialist | Expertise |
 |------------|-----------|
 | `data-engineer` | ETL, pipelines, data warehouses |
@@ -97,21 +103,77 @@ Then just ask for what you need:
 | `security-auditor` | Penetration testing, risk assessment |
 | `compliance-officer` | SOC2, GDPR, regulatory compliance |
 
-### Business Operations (9 specialists)
+### Marketing (14 specialists)
 | Specialist | Expertise |
 |------------|-----------|
-| `growth-marketer` | Acquisition, conversion, analytics |
-| `content-marketer` | Blog posts, SEO, content strategy |
+| `growth-marketer` | Acquisition, conversion, paid ads |
+| `content-marketer` | Blog posts, SEO content, content strategy |
 | `product-marketer` | Positioning, launches, competitive analysis |
-| `financial-analyst` | Modeling, forecasting, unit economics |
-| `controller` | Accounting, financial reporting, controls |
-| `legal-counsel` | Contracts, compliance, IP |
-| `contract-manager` | CLM, negotiations, vendor management |
-| `recruiter` | Hiring, sourcing, candidate experience |
-| `hr-manager` | HR operations, policies, employee relations |
+| `brand-marketer` | Brand strategy, identity, guidelines |
+| `social-media-manager` | Social content, community, engagement |
+| `seo-specialist` | Search optimization, keywords, technical SEO |
+| `email-marketer` | Email campaigns, automation, newsletters |
+| `pr-specialist` | Media relations, press releases |
+| `communications-specialist` | Internal/external comms, messaging |
+| `community-manager` | Community building, forums, advocacy |
+| `events-manager` | Conferences, webinars, trade shows |
+| `video-producer` | Video content, production, editing |
+| `graphic-designer` | Visual design, collateral, graphics |
+| `web-designer` | Website design, landing pages |
+
+### Sales (5 specialists)
+| Specialist | Expertise |
+|------------|-----------|
 | `account-executive` | Sales cycles, negotiations, closing |
 | `sales-engineer` | Technical sales, demos, POCs |
+| `business-developer` | New markets, lead gen, opportunities |
+| `partnerships-manager` | Strategic partnerships, alliances |
+| `customer-success-manager` | Onboarding, retention, expansion |
+
+### Finance (4 specialists)
+| Specialist | Expertise |
+|------------|-----------|
+| `financial-analyst` | Modeling, forecasting, unit economics |
+| `accountant` | General ledger, reconciliations, close |
+| `controller` | Financial reporting, compliance |
+| `corporate-development` | M&A, strategic investments |
+
+### Legal (4 specialists)
+| Specialist | Expertise |
+|------------|-----------|
+| `legal-counsel` | Contracts, compliance, IP |
+| `compliance-officer` | Regulatory, SOC2, GDPR |
+| `contract-manager` | CLM, negotiations, vendor management |
+| `paralegal` | Document prep, research, support |
+
+### People (6 specialists)
+| Specialist | Expertise |
+|------------|-----------|
+| `recruiter` | Hiring, sourcing, candidate experience |
+| `hr-manager` | HR operations, policies, employee relations |
+| `compensation-analyst` | Salary, equity, benefits benchmarking |
+| `talent-development` | Learning, performance, career growth |
+| `hris-analyst` | HR systems, people analytics |
+| `payroll-specialist` | Payroll processing, tax compliance |
+
+### Support (4 specialists)
+| Specialist | Expertise |
+|------------|-----------|
 | `it-support` | Helpdesk, systems, endpoint security |
+| `support-engineer` | Technical support, issue diagnosis |
+| `developer-relations` | Developer community, SDKs, docs |
+| `technical-trainer` | Training programs, workshops |
+
+### Consulting (2 specialists)
+| Specialist | Expertise |
+|------------|-----------|
+| `technical-consultant` | Client solutions, implementations |
+| `technical-business-analyst` | Requirements, process mapping |
+
+### Program Management (1 specialist)
+| Specialist | Expertise |
+|------------|-----------|
+| `technical-program-manager` | Agile, sprint planning, delivery |
 
 ---
 
