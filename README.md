@@ -28,6 +28,11 @@ You have Claude Code. You have skills. But when you say "build me a feature," wh
 
 **Enterprise Team** gives you a virtual company with department orchestrators that route work to the right specialists automatically.
 
+<p align="center">
+  <img src="assets/how-it-works-v3.png" alt="How It Works - Before vs After Enterprise Team" width="100%"/>
+</p>
+
+**Example flow:**
 ```
 "Build a REST API for user auth"
      │
@@ -35,12 +40,14 @@ You have Claude Code. You have skills. But when you say "build me a feature," wh
 ┌─────────────────────────────────────────────────────────┐
 │              enterprise-orchestrator                     │
 │         "This is engineering work..."                   │
-└─────────────────────┬───────────────────────────────────┘
+└─────────────────────────────────────────────────────────┘
+                      │
                       ▼
 ┌─────────────────────────────────────────────────────────┐
 │              engineering-orchestrator                    │
 │     "API work → routing to backend-engineer"            │
-└─────────────────────┬───────────────────────────────────┘
+└─────────────────────────────────────────────────────────┘
+                      │
                       ▼
 ┌─────────────────────────────────────────────────────────┐
 │                  backend-engineer                        │

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg3)"/>
+
+  <!-- BEFORE Side -->
+  <g transform="translate(0, 0)">
+    <rect x="20" y="20" width="360" height="410" rx="12" fill="#1c1917" stroke="#292524" stroke-width="1"/>
+
+    <!-- Header -->
+    <rect x="20" y="20" width="360" height="45" rx="12" fill="#292524"/>
+    <text x="200" y="48" text-anchor="middle" fill="#ef4444" font-family="system-ui" font-size="14" font-weight="700">❌ WITHOUT Enterprise Team</text>
+
+    <!-- Confused user -->
+    <text x="200" y="100" text-anchor="middle" fill="#9ca3af" font-family="system-ui" font-size="48">😕</text>
+
+    <!-- Thought bubbles -->
+    <rect x="50" y="140" width="300" height="35" rx="8" fill="#1e293b" stroke="#374151" stroke-width="1"/>
+    <text x="200" y="162" text-anchor="middle" fill="#9ca3af" font-family="system-ui" font-size="11">"Which skill should I call for this?"</text>
+
+    <rect x="50" y="185" width="300" height="35" rx="8" fill="#1e293b" stroke="#374151" stroke-width="1"/>
+    <text x="200" y="207" text-anchor="middle" fill="#9ca3af" font-family="system-ui" font-size="11">"Is this frontend or backend work?"</text>
+
+    <rect x="50" y="230" width="300" height="35" rx="8" fill="#1e293b" stroke="#374151" stroke-width="1"/>
+    <text x="200" y="252" text-anchor="middle" fill="#9ca3af" font-family="system-ui" font-size="11">"Who handles compliance questions?"</text>
+
+    <rect x="50" y="275" width="300" height="35" rx="8" fill="#1e293b" stroke="#374151" stroke-width="1"/>
+    <text x="200" y="297" text-anchor="middle" fill="#9ca3af" font-family="system-ui" font-size="11">"Let me try 3 different skills..."</text>
+
+    <!-- Red X marks -->
+    <text x="340" y="162" fill="#ef4444" font-family="system-ui" font-size="14">✗</text>
+    <text x="340" y="207" fill="#ef4444" font-family="system-ui" font-size="14">✗</text>
+    <text x="340" y="252" fill="#ef4444" font-family="system-ui" font-size="14">✗</text>
+    <text x="340" y="297" fill="#ef4444" font-family="system-ui" font-size="14">✗</text>
+
+    <!-- Result -->
+    <rect x="100" y="340" width="200" height="60" rx="10" fill="#7f1d1d" stroke="#ef4444" stroke-width="1"/>
+    <text x="200" y="365" text-anchor="middle" fill="#fca5a5" font-family="system-ui" font-size="11" font-weight="600">RESULT</text>
+    <text x="200" y="385" text-anchor="middle" fill="#f87171" font-family="system-ui" font-size="12">Wasted time + wrong expert</text>
+  </g>
+
+  <!-- AFTER Side -->
+  <g transform="translate(400, 0)">
+    <rect x="20" y="20" width="360" height="410" rx="12" fill="#022c22" stroke="#166534" stroke-width="1"/>
+
+    <!-- Header -->
+    <rect x="20" y="20" width="360" height="45" rx="12" fill="#166534"/>
+    <text x="200" y="48" text-anchor="middle" fill="#22c55e" font-family="system-ui" font-size="14" font-weight="700">✓ WITH Enterprise Team</text>
+
+    <!-- Chat interface -->
+    <!-- User message -->
+    <rect x="40" y="85" width="280" height="45" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="100" fill="#60a5fa" font-family="system-ui" font-size="9" font-weight="600">You</text>
+    <text x="55" y="118" fill="#e2e8f0" font-family="system-ui" font-size="11">"Build a REST API for user auth"</text>
+
+    <!-- System routing -->
+    <rect x="40" y="140" width="280" height="35" rx="8" fill="#2e1065" stroke="#7c3aed" stroke-width="1"/>
+    <text x="55" y="155" fill="#a78bfa" font-family="system-ui" font-size="9">🧠 Enterprise Orchestrator</text>
+    <text x="55" y="168" fill="#c4b5fd" font-family="system-ui" font-size="10">Routing to Engineering...</text>
+
+    <!-- Department routing -->
+    <rect x="40" y="185" width="280" height="35" rx="8" fill="#172554" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="200" fill="#60a5fa" font-family="system-ui" font-size="9">⚙️ Engineering Orchestrator</text>
+    <text x="55" y="213" fill="#93c5fd" font-family="system-ui" font-size="10">Assigning to Backend Engineer...</text>
+
+    <!-- Specialist response -->
+    <rect x="40" y="230" width="280" height="100" rx="8" fill="#1e3a5f" stroke="#22c55e" stroke-width="2"/>
+    <text x="55" y="248" fill="#4ade80" font-family="system-ui" font-size="9" font-weight="600">Backend Engineer</text>
+    <text x="55" y="268" fill="#e2e8f0" font-family="system-ui" font-size="10">I'll create your API with:</text>
+    <text x="55" y="285" fill="#86efac" font-family="system-ui" font-size="10">✓ JWT authentication</text>
+    <text x="55" y="300" fill="#86efac" font-family="system-ui" font-size="10">✓ Input validation with Zod</text>
+    <text x="55" y="315" fill="#86efac" font-family="system-ui" font-size="10">✓ Rate limiting & tests</text>
+
+    <!-- Result -->
+    <rect x="100" y="345" width="200" height="60" rx="10" fill="#14532d" stroke="#22c55e" stroke-width="2"/>
+    <text x="200" y="370" text-anchor="middle" fill="#86efac" font-family="system-ui" font-size="11" font-weight="600">RESULT</text>
+    <text x="200" y="390" text-anchor="middle" fill="#4ade80" font-family="system-ui" font-size="12">Right expert, first try ✓</text>
+  </g>
+
+  <!-- Bottom badge -->
+  <rect x="300" y="425" width="200" height="20" rx="10" fill="#1e1b4b"/>
+  <text x="400" y="439" text-anchor="middle" fill="#a5b4fc" font-family="system-ui" font-size="10">39 Specialists • Zero Guesswork</text>
+</svg>
