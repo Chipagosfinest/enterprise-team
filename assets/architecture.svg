@@ -1,212 +1,167 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0a0f"/>
-      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f23"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
     </linearGradient>
-    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#7c3aed"/>
-      <stop offset="100%" style="stop-color:#a855f7"/>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
     </linearGradient>
-    <linearGradient id="engGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#3b82f6"/>
-      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
     </linearGradient>
-    <linearGradient id="infraGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#f97316"/>
-      <stop offset="100%" style="stop-color:#c2410c"/>
+    <linearGradient id="orange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#c2410c"/>
     </linearGradient>
-    <linearGradient id="prodGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#ec4899"/>
-      <stop offset="100%" style="stop-color:#be185d"/>
+    <linearGradient id="pink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#be185d"/>
     </linearGradient>
-    <linearGradient id="dataGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#06b6d4"/>
-      <stop offset="100%" style="stop-color:#0891b2"/>
+    <linearGradient id="cyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
     </linearGradient>
-    <linearGradient id="secGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#ef4444"/>
-      <stop offset="100%" style="stop-color:#b91c1c"/>
+    <linearGradient id="red" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
     </linearGradient>
-    <linearGradient id="bizGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#22c55e"/>
-      <stop offset="100%" style="stop-color:#15803d"/>
+    <linearGradient id="green" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
-    </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="1000" height="700" fill="url(#bgGrad)"/>
-
-  <!-- Grid pattern -->
-  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.05"/>
-  </pattern>
-  <rect width="1000" height="700" fill="url(#grid)"/>
-
-  <!-- Title Section -->
-  <text x="500" y="50" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" filter="url(#glow)">Enterprise Team</text>
-  <text x="500" y="78" text-anchor="middle" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="14">Intelligent Task Routing to 39 Specialized Agents</text>
+  <rect width="820" height="520" fill="url(#bg)"/>
 
   <!-- User Request -->
-  <rect x="400" y="100" width="200" height="44" rx="22" fill="#18181b" stroke="#3f3f46" stroke-width="2"/>
-  <text x="500" y="128" text-anchor="middle" fill="#e4e4e7" font-family="system-ui, sans-serif" font-size="14" font-weight="500">Your Request</text>
+  <rect x="310" y="20" width="200" height="32" rx="16" fill="#27272a" stroke="#3f3f46" stroke-width="1.5"/>
+  <text x="410" y="41" text-anchor="middle" fill="#e4e4e7" font-family="system-ui" font-size="12" font-weight="500">Your Request</text>
 
-  <!-- Flow arrow down -->
-  <path d="M500 144 L500 170" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
-  <polygon points="500,180 494,170 506,170" fill="#7c3aed"/>
+  <!-- Arrow -->
+  <line x1="410" y1="52" x2="410" y2="70" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="410,78 405,70 415,70" fill="#7c3aed"/>
 
   <!-- Enterprise Orchestrator -->
-  <rect x="325" y="185" width="350" height="55" rx="12" fill="url(#headerGrad)" filter="url(#shadow)"/>
-  <text x="500" y="218" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="600">Enterprise Orchestrator</text>
-  <text x="500" y="232" text-anchor="middle" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="10">Routes to correct department</text>
+  <rect x="260" y="82" width="300" height="40" rx="8" fill="url(#purple)"/>
+  <text x="410" y="107" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="600">Enterprise Orchestrator</text>
 
   <!-- Flow lines to departments -->
-  <g stroke="#4b5563" stroke-width="2" fill="none" opacity="0.6">
-    <path d="M380 240 Q 380 270 170 295"/>
-    <path d="M420 240 Q 420 270 340 295"/>
-    <path d="M500 240 L500 295"/>
-    <path d="M580 240 Q 580 270 660 295"/>
-    <path d="M620 240 Q 620 270 830 295"/>
+  <g stroke="#4b5563" stroke-width="1.5" fill="none">
+    <path d="M310 122 Q 310 140 90 155"/>
+    <path d="M350 122 Q 350 140 230 155"/>
+    <path d="M410 122 L 410 155"/>
+    <path d="M470 122 Q 470 140 590 155"/>
+    <path d="M510 122 Q 510 140 730 155"/>
   </g>
 
-  <!-- Department boxes -->
+  <!-- Department Row -->
   <!-- Engineering -->
-  <g transform="translate(75, 295)">
-    <rect width="185" height="50" rx="10" fill="url(#engGrad)" filter="url(#shadow)"/>
-    <text x="92" y="30" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Engineering</text>
-    <text x="92" y="43" text-anchor="middle" fill="#bfdbfe" font-family="system-ui, sans-serif" font-size="10">9 specialists</text>
+  <rect x="15" y="160" width="140" height="36" rx="6" fill="url(#blue)"/>
+  <text x="85" y="181" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">Engineering</text>
+  <text x="85" y="192" text-anchor="middle" fill="#bfdbfe" font-family="system-ui" font-size="9">9 agents</text>
+
+  <!-- Infrastructure -->
+  <rect x="160" y="160" width="110" height="36" rx="6" fill="url(#orange)"/>
+  <text x="215" y="181" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">Infrastructure</text>
+  <text x="215" y="192" text-anchor="middle" fill="#fed7aa" font-family="system-ui" font-size="9">4 agents</text>
+
+  <!-- Product -->
+  <rect x="355" y="160" width="110" height="36" rx="6" fill="url(#pink)"/>
+  <text x="410" y="181" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">Product</text>
+  <text x="410" y="192" text-anchor="middle" fill="#fbcfe8" font-family="system-ui" font-size="9">3 agents</text>
+
+  <!-- Data -->
+  <rect x="535" y="160" width="110" height="36" rx="6" fill="url(#cyan)"/>
+  <text x="590" y="181" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">Data</text>
+  <text x="590" y="192" text-anchor="middle" fill="#a5f3fc" font-family="system-ui" font-size="9">4 agents</text>
+
+  <!-- Security -->
+  <rect x="665" y="160" width="140" height="36" rx="6" fill="url(#red)"/>
+  <text x="735" y="181" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">Security</text>
+  <text x="735" y="192" text-anchor="middle" fill="#fecaca" font-family="system-ui" font-size="9">3 agents</text>
+
+  <!-- Business (centered below) -->
+  <rect x="275" y="205" width="270" height="36" rx="6" fill="url(#green)"/>
+  <text x="410" y="226" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">Business Operations</text>
+  <text x="410" y="237" text-anchor="middle" fill="#bbf7d0" font-family="system-ui" font-size="9">12 agents</text>
+
+  <!-- Specialist Cards -->
+  <!-- Engineering -->
+  <rect x="10" y="250" width="145" height="125" rx="5" fill="#172554" stroke="#3b82f6" stroke-width="1"/>
+  <text x="82" y="267" text-anchor="middle" fill="#93c5fd" font-family="system-ui" font-size="9" font-weight="600">Engineering Team</text>
+  <g font-family="system-ui" font-size="8" fill="#bfdbfe">
+    <text x="16" y="282">Backend Engineer</text>
+    <text x="16" y="294">Frontend Engineer</text>
+    <text x="16" y="306">Mobile Developer</text>
+    <text x="16" y="318">ML Developer</text>
+    <text x="16" y="330">Technical Writer</text>
+    <text x="16" y="342">Solutions Architect</text>
+    <text x="16" y="354">QA Engineer</text>
+    <text x="16" y="366" fill="#60a5fa">+ 2 more</text>
   </g>
 
   <!-- Infrastructure -->
-  <g transform="translate(250, 295)">
-    <rect width="185" height="50" rx="10" fill="url(#infraGrad)" filter="url(#shadow)"/>
-    <text x="92" y="30" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Infrastructure</text>
-    <text x="92" y="43" text-anchor="middle" fill="#fed7aa" font-family="system-ui, sans-serif" font-size="10">4 specialists</text>
+  <rect x="160" y="250" width="100" height="95" rx="5" fill="#431407" stroke="#f97316" stroke-width="1"/>
+  <text x="210" y="267" text-anchor="middle" fill="#fdba74" font-family="system-ui" font-size="9" font-weight="600">Infrastructure</text>
+  <g font-family="system-ui" font-size="8" fill="#fed7aa">
+    <text x="166" y="282">DevOps Engineer</text>
+    <text x="166" y="294">SRE</text>
+    <text x="166" y="306">Database Engineer</text>
+    <text x="166" y="318">Systems Admin</text>
   </g>
 
   <!-- Product -->
-  <g transform="translate(410, 295)">
-    <rect width="185" height="50" rx="10" fill="url(#prodGrad)" filter="url(#shadow)"/>
-    <text x="92" y="30" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Product</text>
-    <text x="92" y="43" text-anchor="middle" fill="#fbcfe8" font-family="system-ui, sans-serif" font-size="10">3 specialists</text>
+  <rect x="265" y="250" width="90" height="80" rx="5" fill="#500724" stroke="#ec4899" stroke-width="1"/>
+  <text x="310" y="267" text-anchor="middle" fill="#f9a8d4" font-family="system-ui" font-size="9" font-weight="600">Product</text>
+  <g font-family="system-ui" font-size="8" fill="#fbcfe8">
+    <text x="271" y="282">Product Manager</text>
+    <text x="271" y="294">UX Researcher</text>
+    <text x="271" y="306">UI Designer</text>
   </g>
 
   <!-- Data -->
-  <g transform="translate(565, 295)">
-    <rect width="185" height="50" rx="10" fill="url(#dataGrad)" filter="url(#shadow)"/>
-    <text x="92" y="30" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Data</text>
-    <text x="92" y="43" text-anchor="middle" fill="#a5f3fc" font-family="system-ui, sans-serif" font-size="10">4 specialists</text>
+  <rect x="540" y="250" width="100" height="95" rx="5" fill="#083344" stroke="#06b6d4" stroke-width="1"/>
+  <text x="590" y="267" text-anchor="middle" fill="#67e8f9" font-family="system-ui" font-size="9" font-weight="600">Data</text>
+  <g font-family="system-ui" font-size="8" fill="#a5f3fc">
+    <text x="546" y="282">Data Engineer</text>
+    <text x="546" y="294">Data Analyst</text>
+    <text x="546" y="306">Data Scientist</text>
+    <text x="546" y="318">QA Engineer</text>
   </g>
 
   <!-- Security -->
-  <g transform="translate(740, 295)">
-    <rect width="185" height="50" rx="10" fill="url(#secGrad)" filter="url(#shadow)"/>
-    <text x="92" y="30" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Security</text>
-    <text x="92" y="43" text-anchor="middle" fill="#fecaca" font-family="system-ui, sans-serif" font-size="10">3 specialists</text>
+  <rect x="660" y="250" width="150" height="80" rx="5" fill="#450a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="735" y="267" text-anchor="middle" fill="#fca5a5" font-family="system-ui" font-size="9" font-weight="600">Security</text>
+  <g font-family="system-ui" font-size="8" fill="#fecaca">
+    <text x="666" y="282">Security Engineer</text>
+    <text x="666" y="294">Security Auditor</text>
+    <text x="666" y="306">Compliance Officer</text>
   </g>
 
-  <!-- Business (centered below) -->
-  <g transform="translate(410, 360)">
-    <rect width="185" height="50" rx="10" fill="url(#bizGrad)" filter="url(#shadow)"/>
-    <text x="92" y="30" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Business</text>
-    <text x="92" y="43" text-anchor="middle" fill="#bbf7d0" font-family="system-ui, sans-serif" font-size="10">9 specialists</text>
+  <!-- Business -->
+  <rect x="10" y="385" width="800" height="70" rx="5" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+  <text x="410" y="402" text-anchor="middle" fill="#86efac" font-family="system-ui" font-size="9" font-weight="600">Business Operations Team</text>
+  <g font-family="system-ui" font-size="8" fill="#bbf7d0">
+    <text x="20" y="420">Growth Marketer</text>
+    <text x="20" y="435">Legal Counsel</text>
+    <text x="135" y="420">Content Marketer</text>
+    <text x="135" y="435">Contract Manager</text>
+    <text x="260" y="420">Product Marketer</text>
+    <text x="260" y="435">Recruiter</text>
+    <text x="375" y="420">Financial Analyst</text>
+    <text x="375" y="435">HR Manager</text>
+    <text x="500" y="420">Controller</text>
+    <text x="500" y="435">Account Executive</text>
+    <text x="625" y="420">Sales Engineer</text>
+    <text x="625" y="435">IT Support</text>
+    <text x="730" y="428" fill="#4ade80">+ Systems Admin</text>
   </g>
 
-  <!-- Connecting lines to specialists -->
-  <g stroke-width="1" fill="none" opacity="0.4">
-    <path d="M167 345 L167 420" stroke="#3b82f6"/>
-    <path d="M342 345 L342 420" stroke="#f97316"/>
-    <path d="M502 410 L502 440" stroke="#22c55e"/>
-    <path d="M657 345 L657 420" stroke="#06b6d4"/>
-    <path d="M832 345 L832 420" stroke="#ef4444"/>
-  </g>
-
-  <!-- Specialist lists -->
-  <!-- Engineering Specialists -->
-  <g transform="translate(60, 430)" font-family="system-ui, sans-serif" font-size="10">
-    <rect width="215" height="185" rx="8" fill="#172554" stroke="#3b82f6" stroke-width="1" opacity="0.9"/>
-    <text x="107" y="20" text-anchor="middle" fill="#93c5fd" font-weight="600" font-size="11">Engineering Team</text>
-    <text x="15" y="40" fill="#bfdbfe">Backend Engineer</text>
-    <text x="15" y="55" fill="#bfdbfe">Frontend Engineer</text>
-    <text x="15" y="70" fill="#bfdbfe">Mobile Developer</text>
-    <text x="15" y="85" fill="#bfdbfe">ML Developer</text>
-    <text x="15" y="100" fill="#bfdbfe">Technical Writer</text>
-    <text x="15" y="115" fill="#bfdbfe">Solutions Architect</text>
-    <text x="15" y="130" fill="#bfdbfe">QA Engineer</text>
-    <text x="15" y="145" fill="#60a5fa">+ 2 more specialists</text>
-  </g>
-
-  <!-- Infrastructure Specialists -->
-  <g transform="translate(235, 430)" font-family="system-ui, sans-serif" font-size="10">
-    <rect width="215" height="145" rx="8" fill="#431407" stroke="#f97316" stroke-width="1" opacity="0.9"/>
-    <text x="107" y="20" text-anchor="middle" fill="#fdba74" font-weight="600" font-size="11">Infrastructure Team</text>
-    <text x="15" y="40" fill="#fed7aa">DevOps Engineer</text>
-    <text x="15" y="55" fill="#fed7aa">Site Reliability Engineer</text>
-    <text x="15" y="70" fill="#fed7aa">Database Engineer</text>
-    <text x="15" y="85" fill="#fed7aa">Systems Admin</text>
-  </g>
-
-  <!-- Product Specialists -->
-  <g transform="translate(410, 450)" font-family="system-ui, sans-serif" font-size="10">
-    <rect width="185" height="125" rx="8" fill="#831843" stroke="#ec4899" stroke-width="1" opacity="0.9"/>
-    <text x="92" y="20" text-anchor="middle" fill="#f9a8d4" font-weight="600" font-size="11">Product Team</text>
-    <text x="15" y="40" fill="#fbcfe8">Product Manager</text>
-    <text x="15" y="55" fill="#fbcfe8">UX Researcher</text>
-    <text x="15" y="70" fill="#fbcfe8">UI Designer</text>
-  </g>
-
-  <!-- Data Specialists -->
-  <g transform="translate(595, 430)" font-family="system-ui, sans-serif" font-size="10">
-    <rect width="145" height="145" rx="8" fill="#083344" stroke="#06b6d4" stroke-width="1" opacity="0.9"/>
-    <text x="72" y="20" text-anchor="middle" fill="#67e8f9" font-weight="600" font-size="11">Data Team</text>
-    <text x="15" y="40" fill="#a5f3fc">Data Engineer</text>
-    <text x="15" y="55" fill="#a5f3fc">Data Analyst</text>
-    <text x="15" y="70" fill="#a5f3fc">Data Scientist</text>
-    <text x="15" y="85" fill="#a5f3fc">QA Engineer</text>
-  </g>
-
-  <!-- Security Specialists -->
-  <g transform="translate(740, 430)" font-family="system-ui, sans-serif" font-size="10">
-    <rect width="185" height="130" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="1" opacity="0.9"/>
-    <text x="92" y="20" text-anchor="middle" fill="#fca5a5" font-weight="600" font-size="11">Security Team</text>
-    <text x="15" y="40" fill="#fecaca">Security Engineer</text>
-    <text x="15" y="55" fill="#fecaca">Security Auditor</text>
-    <text x="15" y="70" fill="#fecaca">Compliance Officer</text>
-  </g>
-
-  <!-- Business Specialists (bottom center) -->
-  <g transform="translate(250, 585)" font-family="system-ui, sans-serif" font-size="10">
-    <rect width="500" height="90" rx="8" fill="#14532d" stroke="#22c55e" stroke-width="1" opacity="0.9"/>
-    <text x="250" y="20" text-anchor="middle" fill="#86efac" font-weight="600" font-size="11">Business Operations Team</text>
-    <g transform="translate(15, 35)">
-      <text fill="#bbf7d0">Growth Marketer</text>
-      <text x="100" fill="#bbf7d0">Content Marketer</text>
-      <text x="200" fill="#bbf7d0">Product Marketer</text>
-      <text x="320" fill="#bbf7d0">Financial Analyst</text>
-      <text x="430" fill="#bbf7d0">Controller</text>
-    </g>
-    <g transform="translate(15, 55)">
-      <text fill="#bbf7d0">Legal Counsel</text>
-      <text x="100" fill="#bbf7d0">Contract Manager</text>
-      <text x="220" fill="#bbf7d0">Recruiter</text>
-      <text x="300" fill="#bbf7d0">HR Manager</text>
-      <text x="390" fill="#bbf7d0">Account Executive</text>
-    </g>
-    <text x="15" y="75" fill="#4ade80">Sales Engineer, IT Support</text>
-  </g>
-
-  <!-- Footer badge -->
-  <rect x="350" y="680" width="300" height="8" rx="4" fill="#27272a"/>
-  <rect x="350" y="680" width="200" height="8" rx="4" fill="#7c3aed" opacity="0.8"/>
-  <text x="500" y="692" text-anchor="middle" fill="#71717a" font-family="system-ui, sans-serif" font-size="9">Powered by Claude Opus</text>
+  <!-- Stats bar -->
+  <rect x="210" y="470" width="400" height="30" rx="6" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+  <text x="410" y="490" text-anchor="middle" fill="#a1a1aa" font-family="system-ui" font-size="11" font-weight="500">39 Agents • 7 Orchestrators • 6 Skills • Opus</text>
 </svg>
