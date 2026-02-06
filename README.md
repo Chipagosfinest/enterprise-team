@@ -165,11 +165,13 @@ flagged for your review.
 
 ## Quick Start
 
+Open your terminal and run:
+
 ```bash
 git clone https://github.com/Chipagosfinest/enterprise-team.git ~/.claude/plugins/enterprise-team
 ```
 
-That's it. One command. The plugin is now available in any project. Then just ask for what you need:
+That's it. Start Claude Code and the plugin is ready. Then just ask for what you need:
 
 ```
 "Design and build a settings page with dark mode"
