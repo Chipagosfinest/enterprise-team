@@ -331,6 +331,42 @@ The tradeoff: More comprehensive responses, slightly more tokens. If you know ex
 
 ---
 
+## Troubleshooting
+
+### Install returns no output
+
+If `/plugin install enterprise-team@enterprise-plugins` returns nothing, a folder or symlink with the same name likely already exists:
+
+```bash
+# Check for existing installation
+ls -la ~/.claude/plugins/enterprise-team
+
+# If it's a symlink (for local development), remove it first
+rm ~/.claude/plugins/enterprise-team
+
+# Then retry install
+/plugin install enterprise-team@enterprise-plugins
+```
+
+### Marketplace not found
+
+Make sure you've added the marketplace first:
+```bash
+/plugin marketplace add Chipagosfinest/enterprise-team
+```
+
+### Plugin not loading
+
+Restart Claude Code after installation to ensure the plugin is loaded.
+
+---
+
+## Contributing
+
+Want to add plugins to this marketplace? See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
 ## License
 
 MIT © [Alec Gutman](https://github.com/Chipagosfinest)
