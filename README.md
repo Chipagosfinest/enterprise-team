@@ -13,7 +13,13 @@
 </p>
 
 <p align="center">
-  <img src="assets/architecture.jpg" alt="Enterprise Team Architecture" width="100%"/>
+  <video src="assets/cost-savings.mp4" width="100%" autoplay loop muted playsinline>
+    Your browser does not support the video tag.
+  </video>
+</p>
+
+<p align="center">
+  <a href="assets/cost-savings.mp4">Watch the video</a> | What does it cost to hire a company? $10M+/year. This plugin? $0.
 </p>
 
 ---
@@ -54,7 +60,7 @@ When you say "build me a settings page with dark mode," Enterprise Team doesn't 
 Each specialist contributes their expertise. The result is closer to what a real team would produce.
 
 <p align="center">
-  <img src="assets/how-it-works-v3.png" alt="How It Works - Before vs After Enterprise Team" width="100%"/>
+  <img src="assets/no-more-guessing.png" alt="No More Guessing - Enterprise Team Routes to the Right Specialists" width="100%"/>
 </p>
 
 ---
@@ -165,15 +171,19 @@ flagged for your review.
 
 ## Quick Start
 
-```bash
-# Install with npx
-npx skills add Chipagosfinest/enterprise-team --yes
+**1. Add the marketplace**
 
-# Or clone directly
-git clone https://github.com/Chipagosfinest/enterprise-team.git ~/.claude/plugins/enterprise-team
+In Claude Code, run:
+```
+/plugin marketplace add Chipagosfinest/enterprise-team
 ```
 
-Then just ask for what you need:
+**2. Install the plugin**
+```
+/plugin install enterprise-team@enterprise-team
+```
+
+That's it. The plugin is now available in any project. Then just ask for what you need:
 
 ```
 "Design and build a settings page with dark mode"
