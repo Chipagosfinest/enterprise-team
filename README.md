@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/architecture.png" alt="Enterprise Team Architecture" width="100%"/>
+  <img src="assets/architecture.jpg" alt="Enterprise Team Architecture" width="100%"/>
 </p>
 
 ---
