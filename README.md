@@ -168,7 +168,7 @@ flagged for your review.
 Open your terminal and run:
 
 ```bash
-git clone https://github.com/Chipagosfinest/enterprise-team.git ~/.claude/plugins/enterprise-team
+rm -rf ~/.claude/plugins/enterprise-team && git clone https://github.com/Chipagosfinest/enterprise-team.git ~/.claude/plugins/enterprise-team
 ```
 
 That's it. Start Claude Code and the plugin is ready. Then just ask for what you need:
