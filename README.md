@@ -32,29 +32,6 @@ You have Claude Code. You have skills. But when you say "build me a feature," wh
   <img src="assets/how-it-works-v3.png" alt="How It Works - Before vs After Enterprise Team" width="100%"/>
 </p>
 
-**Example flow:**
-```
-"Build a REST API for user auth"
-     │
-     ▼
-┌─────────────────────────────────────────────────────────┐
-│              enterprise-orchestrator                     │
-│         "This is engineering work..."                   │
-└─────────────────────────────────────────────────────────┘
-                      │
-                      ▼
-┌─────────────────────────────────────────────────────────┐
-│              engineering-orchestrator                    │
-│     "API work → routing to backend-engineer"            │
-└─────────────────────────────────────────────────────────┘
-                      │
-                      ▼
-┌─────────────────────────────────────────────────────────┐
-│                  backend-engineer                        │
-│     Creates the API with auth, validation, tests        │
-└─────────────────────────────────────────────────────────┘
-```
-
 ---
 
 ## Quick Start
