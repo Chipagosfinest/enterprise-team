@@ -47,44 +47,9 @@ You have Claude Code. You have skills. But when you say "build me a feature," wh
 
 ## How It Works
 
-```mermaid
-flowchart TD
-    User[Your Request] --> EO[Enterprise Orchestrator]
-
-    EO --> ENG[Engineering]
-    EO --> INFRA[Infrastructure]
-    EO --> PROD[Product]
-    EO --> DATA[Data]
-    EO --> SEC[Security]
-    EO --> BIZ[Business]
-
-    ENG --> BE[Backend Engineer]
-    ENG --> FE[Frontend Engineer]
-    ENG --> Mobile[Mobile Developer]
-    ENG --> ML[ML Developer]
-    ENG --> BC[Blockchain Engineer]
-
-    INFRA --> DevOps[DevOps Engineer]
-    INFRA --> SRE[SRE]
-    INFRA --> DB[Database Engineer]
-
-    PROD --> PM[Product Manager]
-    PROD --> UX[UX Researcher]
-    PROD --> UI[UI Designer]
-
-    DATA --> DE[Data Engineer]
-    DATA --> QA[QA Engineer]
-    DATA --> Analytics[Analytics]
-
-    SEC --> SecEng[Security Engineer]
-    SEC --> Audit[Security Auditor]
-
-    BIZ --> Sales[Sales]
-    BIZ --> Marketing[Marketing]
-    BIZ --> Finance[Finance]
-    BIZ --> Legal[Legal]
-    BIZ --> HR[HR]
-```
+<p align="center">
+  <img src="assets/architecture.svg" alt="Enterprise Team Architecture" width="100%"/>
+</p>
 
 ### Two-Layer Routing
 

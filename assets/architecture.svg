@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="engGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="infraGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#fb923c"/>
+    </linearGradient>
+    <linearGradient id="prodGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#f472b6"/>
+    </linearGradient>
+    <linearGradient id="dataGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="secGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#f87171"/>
+    </linearGradient>
+    <linearGradient id="bizGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0f0f0f"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold">Enterprise Team Architecture</text>
+
+  <!-- User Request Box -->
+  <rect x="350" y="60" width="200" height="40" rx="8" fill="#27272a" stroke="#3f3f46" stroke-width="1" filter="url(#shadow)"/>
+  <text x="450" y="85" text-anchor="middle" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="14">Your Request</text>
+
+  <!-- Arrow down -->
+  <path d="M450 100 L450 130 L445 125 M450 130 L455 125" stroke="#6366f1" stroke-width="2" fill="none"/>
+
+  <!-- Enterprise Orchestrator -->
+  <rect x="300" y="135" width="300" height="50" rx="10" fill="url(#headerGrad)" filter="url(#shadow)"/>
+  <text x="450" y="165" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="600">Enterprise Orchestrator</text>
+
+  <!-- Lines from Enterprise to Departments -->
+  <path d="M350 185 L150 220" stroke="#3f3f46" stroke-width="1.5"/>
+  <path d="M400 185 L300 220" stroke="#3f3f46" stroke-width="1.5"/>
+  <path d="M450 185 L450 220" stroke="#3f3f46" stroke-width="1.5"/>
+  <path d="M500 185 L600 220" stroke="#3f3f46" stroke-width="1.5"/>
+  <path d="M550 185 L750 220" stroke="#3f3f46" stroke-width="1.5"/>
+
+  <!-- Department Boxes Row 1 -->
+  <!-- Engineering -->
+  <rect x="50" y="220" width="200" height="40" rx="8" fill="url(#engGrad)" filter="url(#shadow)"/>
+  <text x="150" y="245" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Engineering</text>
+
+  <!-- Infrastructure -->
+  <rect x="200" y="220" width="200" height="40" rx="8" fill="url(#infraGrad)" filter="url(#shadow)"/>
+  <text x="300" y="245" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Infrastructure</text>
+
+  <!-- Product -->
+  <rect x="350" y="220" width="200" height="40" rx="8" fill="url(#prodGrad)" filter="url(#shadow)"/>
+  <text x="450" y="245" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Product</text>
+
+  <!-- Data -->
+  <rect x="500" y="220" width="200" height="40" rx="8" fill="url(#dataGrad)" filter="url(#shadow)"/>
+  <text x="600" y="245" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Data</text>
+
+  <!-- Security -->
+  <rect x="650" y="220" width="200" height="40" rx="8" fill="url(#secGrad)" filter="url(#shadow)"/>
+  <text x="750" y="245" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Security</text>
+
+  <!-- Connecting lines to specialists -->
+  <path d="M150 260 L150 290" stroke="#3b82f6" stroke-width="1" opacity="0.6"/>
+  <path d="M300 260 L300 290" stroke="#f97316" stroke-width="1" opacity="0.6"/>
+  <path d="M450 260 L450 290" stroke="#ec4899" stroke-width="1" opacity="0.6"/>
+  <path d="M600 260 L600 290" stroke="#06b6d4" stroke-width="1" opacity="0.6"/>
+  <path d="M750 260 L750 290" stroke="#ef4444" stroke-width="1" opacity="0.6"/>
+
+  <!-- Engineering Specialists -->
+  <rect x="20" y="295" width="120" height="28" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="80" y="314" text-anchor="middle" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="11">Backend</text>
+
+  <rect x="20" y="328" width="120" height="28" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="80" y="347" text-anchor="middle" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="11">Frontend</text>
+
+  <rect x="20" y="361" width="120" height="28" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="80" y="380" text-anchor="middle" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="11">Mobile</text>
+
+  <rect x="20" y="394" width="120" height="28" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="80" y="413" text-anchor="middle" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="11">ML/AI</text>
+
+  <rect x="20" y="427" width="120" height="28" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="80" y="446" text-anchor="middle" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="11">Blockchain</text>
+
+  <rect x="20" y="460" width="120" height="28" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="80" y="479" text-anchor="middle" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="11">Architect</text>
+
+  <!-- Infrastructure Specialists -->
+  <rect x="170" y="295" width="120" height="28" rx="6" fill="#431407" stroke="#f97316" stroke-width="1"/>
+  <text x="230" y="314" text-anchor="middle" fill="#fdba74" font-family="system-ui, sans-serif" font-size="11">DevOps</text>
+
+  <rect x="170" y="328" width="120" height="28" rx="6" fill="#431407" stroke="#f97316" stroke-width="1"/>
+  <text x="230" y="347" text-anchor="middle" fill="#fdba74" font-family="system-ui, sans-serif" font-size="11">SRE</text>
+
+  <rect x="170" y="361" width="120" height="28" rx="6" fill="#431407" stroke="#f97316" stroke-width="1"/>
+  <text x="230" y="380" text-anchor="middle" fill="#fdba74" font-family="system-ui, sans-serif" font-size="11">Database</text>
+
+  <rect x="170" y="394" width="120" height="28" rx="6" fill="#431407" stroke="#f97316" stroke-width="1"/>
+  <text x="230" y="413" text-anchor="middle" fill="#fdba74" font-family="system-ui, sans-serif" font-size="11">Deployment</text>
+
+  <rect x="170" y="427" width="120" height="28" rx="6" fill="#431407" stroke="#f97316" stroke-width="1"/>
+  <text x="230" y="446" text-anchor="middle" fill="#fdba74" font-family="system-ui, sans-serif" font-size="11">Platform</text>
+
+  <!-- Product Specialists -->
+  <rect x="320" y="295" width="120" height="28" rx="6" fill="#500724" stroke="#ec4899" stroke-width="1"/>
+  <text x="380" y="314" text-anchor="middle" fill="#f9a8d4" font-family="system-ui, sans-serif" font-size="11">Product Mgr</text>
+
+  <rect x="320" y="328" width="120" height="28" rx="6" fill="#500724" stroke="#ec4899" stroke-width="1"/>
+  <text x="380" y="347" text-anchor="middle" fill="#f9a8d4" font-family="system-ui, sans-serif" font-size="11">UX Research</text>
+
+  <rect x="320" y="361" width="120" height="28" rx="6" fill="#500724" stroke="#ec4899" stroke-width="1"/>
+  <text x="380" y="380" text-anchor="middle" fill="#f9a8d4" font-family="system-ui, sans-serif" font-size="11">UI Design</text>
+
+  <rect x="320" y="394" width="120" height="28" rx="6" fill="#500724" stroke="#ec4899" stroke-width="1"/>
+  <text x="380" y="413" text-anchor="middle" fill="#f9a8d4" font-family="system-ui, sans-serif" font-size="11">Design Review</text>
+
+  <!-- Data Specialists -->
+  <rect x="470" y="295" width="120" height="28" rx="6" fill="#083344" stroke="#06b6d4" stroke-width="1"/>
+  <text x="530" y="314" text-anchor="middle" fill="#67e8f9" font-family="system-ui, sans-serif" font-size="11">Data Eng</text>
+
+  <rect x="470" y="328" width="120" height="28" rx="6" fill="#083344" stroke="#06b6d4" stroke-width="1"/>
+  <text x="530" y="347" text-anchor="middle" fill="#67e8f9" font-family="system-ui, sans-serif" font-size="11">Analytics</text>
+
+  <rect x="470" y="361" width="120" height="28" rx="6" fill="#083344" stroke="#06b6d4" stroke-width="1"/>
+  <text x="530" y="380" text-anchor="middle" fill="#67e8f9" font-family="system-ui, sans-serif" font-size="11">QA Engineer</text>
+
+  <rect x="470" y="394" width="120" height="28" rx="6" fill="#083344" stroke="#06b6d4" stroke-width="1"/>
+  <text x="530" y="413" text-anchor="middle" fill="#67e8f9" font-family="system-ui, sans-serif" font-size="11">Data Science</text>
+
+  <!-- Security Specialists -->
+  <rect x="620" y="295" width="120" height="28" rx="6" fill="#450a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="680" y="314" text-anchor="middle" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="11">Security Eng</text>
+
+  <rect x="620" y="328" width="120" height="28" rx="6" fill="#450a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="680" y="347" text-anchor="middle" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="11">Auditor</text>
+
+  <rect x="620" y="361" width="120" height="28" rx="6" fill="#450a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="680" y="380" text-anchor="middle" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="11">Compliance</text>
+
+  <!-- Business Section -->
+  <rect x="770" y="295" width="120" height="28" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+  <text x="830" y="314" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="11">Sales</text>
+
+  <rect x="770" y="328" width="120" height="28" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+  <text x="830" y="347" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="11">Marketing</text>
+
+  <rect x="770" y="361" width="120" height="28" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+  <text x="830" y="380" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="11">Finance</text>
+
+  <rect x="770" y="394" width="120" height="28" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+  <text x="830" y="413" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="11">Legal</text>
+
+  <rect x="770" y="427" width="120" height="28" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+  <text x="830" y="446" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="11">HR</text>
+
+  <!-- Business label -->
+  <rect x="770" y="220" width="120" height="40" rx="8" fill="url(#bizGrad)" filter="url(#shadow)"/>
+  <text x="830" y="245" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Business</text>
+  <path d="M830 260 L830 290" stroke="#22c55e" stroke-width="1" opacity="0.6"/>
+
+  <!-- Footer stats -->
+  <text x="450" y="550" text-anchor="middle" fill="#71717a" font-family="system-ui, sans-serif" font-size="13">50+ Specialized Agents • 6 Departments • Opus-Powered Routing</text>
+
+  <!-- Connecting line to business -->
+  <path d="M600 185 L830 220" stroke="#3f3f46" stroke-width="1.5"/>
+</svg>
