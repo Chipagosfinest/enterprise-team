@@ -165,19 +165,11 @@ flagged for your review.
 
 ## Quick Start
 
-**1. Add the marketplace**
-
-In Claude Code, run:
-```
-/plugin marketplace add Chipagosfinest/enterprise-team
+```bash
+git clone https://github.com/Chipagosfinest/enterprise-team.git ~/.claude/plugins/enterprise-team
 ```
 
-**2. Install the plugin**
-```
-/plugin install enterprise-team@enterprise-team
-```
-
-That's it. The plugin is now available in any project. Then just ask for what you need:
+That's it. One command. The plugin is now available in any project. Then just ask for what you need:
 
 ```
 "Design and build a settings page with dark mode"
