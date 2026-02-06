@@ -18,19 +18,148 @@
 
 ---
 
-## The Problem
+## The Problem with Generalist Agents
 
-You have Claude Code. You have skills. But when you say "build me a feature," who decides whether that's a frontend task, backend task, or both? When you say "deploy this," who knows if you need DevOps, database work, or infrastructure setup?
+When you ask Claude Code to "build me a dashboard," it does its best. But Claude is trying to be everything at once: frontend developer, backend engineer, database architect, and UI designer. The result? Competent but generic work.
 
-**Skills are powerful but siloed.** You end up calling them manually or hoping the right one triggers.
+The real issue is **context switching at scale**. A generalist agent:
 
-## The Solution
+- Has to hold patterns for dozens of domains simultaneously
+- Can't go deep on any single specialty
+- Applies the same approach whether the task needs a security mindset or a marketing mindset
+- Doesn't know when to ask for help from a different discipline
 
-**Enterprise Team** gives you a virtual company with department orchestrators that route work to the right specialists automatically.
+You end up with code that works but doesn't reflect what a dedicated specialist would produce. The API design a backend-focused engineer would craft. The component architecture a frontend specialist would build. The security hardening an AppSec engineer would insist on.
+
+**Skills help, but they're manual.** You have to know which skill to invoke, when to switch contexts, and how to coordinate handoffs between different specialties. That cognitive load is on you.
+
+## A Different Approach
+
+What if Claude Code could operate like an actual company?
+
+The key insight: **departments exist for a reason**. Real organizations don't have one person doing everything. They have specialists who go deep, orchestrated by managers who route work to the right people.
+
+Enterprise Team replicates this structure:
+
+1. **Department Orchestrators** understand what their specialists do and route work accordingly
+2. **Specialists** go deep on their domain with focused system prompts, tools, and patterns
+3. **Cross-functional routing** means a single request can flow through multiple departments seamlessly
+
+When you say "build me a settings page with dark mode," Enterprise Team doesn't just write code. The orchestrator recognizes this needs:
+- **Frontend Engineer** for component architecture
+- **UI Designer** for the visual system
+- **Backend Engineer** if settings need persistence
+- **Security Engineer** if settings include sensitive data
+
+Each specialist contributes their expertise. The result is closer to what a real team would produce.
 
 <p align="center">
   <img src="assets/how-it-works-v3.png" alt="How It Works - Before vs After Enterprise Team" width="100%"/>
 </p>
+
+---
+
+## How It Works
+
+### Phase 1: Request Analysis
+
+When you make a request, the orchestration layer analyzes it:
+
+```
+User: "Set up authentication with OAuth and add a login page"
+```
+
+The orchestrator identifies:
+- **Primary domain**: Engineering (auth system + UI)
+- **Specialists needed**: Backend Engineer (OAuth flow), Frontend Engineer (login page), Security Engineer (token handling)
+- **Sequence**: Security review of approach → Backend implementation → Frontend integration
+
+### Phase 2: Specialist Dispatch
+
+Each specialist receives:
+- The original request with relevant context
+- Their domain-specific system prompt (security mindset, performance focus, etc.)
+- Access to tools appropriate for their role
+- Awareness of what other specialists are handling
+
+The **Backend Engineer** focuses on:
+- OAuth provider integration
+- Token refresh logic
+- Session management
+- API endpoint design
+
+The **Frontend Engineer** focuses on:
+- Login form UX
+- Error state handling
+- Loading states
+- Redirect flows
+
+The **Security Engineer** reviews:
+- Token storage (not localStorage!)
+- CSRF protection
+- Rate limiting needs
+- Secure cookie configuration
+
+### Phase 3: Integration
+
+Work products from specialists are integrated with awareness of each other. The frontend engineer knows what endpoints the backend engineer created. The security engineer's requirements are applied to both.
+
+### When Departments Hand Off
+
+Cross-functional work is common:
+
+| Request | Flow |
+|---------|------|
+| "Create a pricing page" | Product Manager (positioning) → UI Designer (layout) → Frontend Engineer (implementation) → Growth Marketer (conversion optimization) |
+| "We need SOC2 compliance" | Compliance Officer (requirements) → Security Engineer (implementation) → Technical Writer (documentation) |
+| "Launch the new feature" | Product Manager (GTM plan) → Marketing (campaign) → Engineering (feature flags) → Support (training) |
+
+---
+
+## Example Session
+
+```
+User: Build a user settings page where users can update their profile,
+      change their password, and manage notification preferences.
+
+Orchestrator: This request spans multiple specialties. Routing to:
+  - UI Designer: Settings page layout and component design
+  - Frontend Engineer: Implementation and state management
+  - Backend Engineer: API endpoints for settings CRUD
+  - Security Engineer: Password change flow review
+
+[UI Designer]
+Designing settings page structure:
+- Tab-based navigation (Profile | Security | Notifications)
+- Form sections with clear hierarchy
+- Inline validation feedback
+- Responsive layout for mobile
+
+[Frontend Engineer]
+Implementing settings components:
+- useSettings hook for state management
+- Form validation with react-hook-form
+- Optimistic updates with rollback
+- Tab routing with URL sync
+
+[Backend Engineer]
+Creating settings API:
+- GET/PATCH /api/settings/profile
+- POST /api/settings/password (requires current password)
+- GET/PATCH /api/settings/notifications
+- Rate limiting on password endpoint
+
+[Security Engineer]
+Security review:
+✓ Password change requires current password verification
+✓ Password strength requirements enforced
+✓ Session invalidation option after password change
+⚠ Recommend: Add email notification on password change
+⚠ Recommend: Add 2FA prompt for security settings
+
+Orchestrator: Implementation complete. Security recommendations
+flagged for your review.
+```
 
 ---
 
@@ -53,6 +182,8 @@ Then just ask for what you need:
 "Review this code for security vulnerabilities"
 "Plan our product launch campaign"
 ```
+
+The orchestrator routes to the right specialists automatically.
 
 ---
 
@@ -179,13 +310,20 @@ Then just ask for what you need:
 
 ## Why This Approach?
 
-| Approach | Pros | Cons |
-|----------|------|------|
-| **Individual Skills** | Focused, lightweight | Manual invocation required |
-| **Single Agent** | Simple | Jack of all trades, master of none |
-| **Enterprise Team** | Right specialist for every task | Slightly more setup |
+| Approach | How It Works | Best For |
+|----------|--------------|----------|
+| **Single Agent** | One generalist handles everything | Quick tasks, exploration |
+| **Individual Skills** | Manual invocation of focused skills | When you know exactly what you need |
+| **Swarms/Parallel** | Dependency-based parallel execution | Large projects with clear task breakdown |
+| **Enterprise Team** | Automatic routing to domain specialists | Cross-functional work, expert-level output |
 
-The orchestrator pattern means you get **expert-level responses** without needing to know which expert to call.
+Enterprise Team shines when:
+- You don't know which specialty a task needs
+- Work crosses multiple domains (most real work does)
+- You want specialist-quality output without manual orchestration
+- The request is ambiguous and benefits from multiple perspectives
+
+The tradeoff: More comprehensive responses, slightly more tokens. If you know exactly what you need and just want a quick answer, a single skill or direct prompt might be faster.
 
 ---
 
