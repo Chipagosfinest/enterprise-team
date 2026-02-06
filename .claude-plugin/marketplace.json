@@ -1,38 +1,15 @@
 {
-  "name": "enterprise-team",
+  "name": "enterprise-plugins",
+  "description": "Enterprise Team - Hire a whole company with one plugin",
   "owner": {
-    "name": "Alec Gutman",
-    "email": "alec@example.com"
-  },
-  "metadata": {
-    "description": "Hire a whole company with one plugin - 75 AI specialists across 10 departments",
-    "version": "2.0.0",
-    "homepage": "https://github.com/Chipagosfinest/enterprise-team"
+    "name": "Alec Gutman"
   },
   "plugins": [
     {
       "name": "enterprise-team",
-      "source": ".",
+      "source": "./enterprise-team",
       "description": "75 specialized AI agents across Engineering, Product, Infrastructure, Data, Security, Marketing, Sales, Finance, Legal, and People. Automatic routing to the right specialist.",
-      "version": "2.0.0",
-      "author": {
-        "name": "Alec Gutman",
-        "url": "https://github.com/Chipagosfinest"
-      },
-      "category": "agents",
-      "homepage": "https://github.com/Chipagosfinest/enterprise-team",
-      "keywords": [
-        "agents",
-        "team",
-        "specialists",
-        "orchestration",
-        "enterprise",
-        "engineering",
-        "marketing",
-        "sales",
-        "finance",
-        "legal"
-      ]
+      "version": "2.0.0"
     }
   ]
 }
