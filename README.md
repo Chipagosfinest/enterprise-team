@@ -12,6 +12,10 @@
   39 specialized AI agents across Engineering, Product, Infrastructure, Data, Security, and Business.
 </p>
 
+<p align="center">
+  <img src="assets/architecture.png" alt="Enterprise Team Architecture" width="100%"/>
+</p>
+
 ---
 
 ## The Problem
@@ -43,21 +47,6 @@ You have Claude Code. You have skills. But when you say "build me a feature," wh
 │     Creates the API with auth, validation, tests        │
 └─────────────────────────────────────────────────────────┘
 ```
-
----
-
-## How It Works
-
-<p align="center">
-  <img src="assets/architecture.jpg" alt="Enterprise Team Architecture" width="100%"/>
-</p>
-
-### Two-Layer Routing
-
-1. **Enterprise Orchestrator** - Identifies the department (Engineering? Product? Business?)
-2. **Department Orchestrator** - Routes to the exact specialist needed
-
-All orchestrators and specialists use **Opus** for maximum capability.
 
 ---
 
