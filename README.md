@@ -13,13 +13,9 @@
 </p>
 
 <p align="center">
-  <video src="assets/cost-savings.mp4" width="100%" autoplay loop muted playsinline>
-    Your browser does not support the video tag.
-  </video>
-</p>
-
-<p align="center">
-  <a href="assets/cost-savings.mp4">Watch the video</a> | What does it cost to hire a company? $10M+/year. This plugin? $0.
+  <a href="https://github.com/Chipagosfinest/enterprise-team/blob/main/assets/cost-savings.mp4">
+    <img src="https://img.shields.io/badge/▶%20Watch%20Video-What%20does%20a%20%2410M%20team%20cost%3F-FF0000?style=for-the-badge&logoColor=white" alt="Watch Video: What does a $10M team cost?"/>
+  </a>
 </p>
 
 ---
