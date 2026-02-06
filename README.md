@@ -13,9 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Chipagosfinest/enterprise-team/blob/main/assets/cost-savings.mp4">
-    <img src="https://img.shields.io/badge/▶%20Watch%20Video-What%20does%20a%20%2410M%20team%20cost%3F-FF0000?style=for-the-badge&logoColor=white" alt="Watch Video: What does a $10M team cost?"/>
-  </a>
+  <img src="assets/brain-meme.jpg" alt="Evolution: ChatGPT → Claude Code → Claude Code with skills → 75 AI employees auto-routing your requests" width="100%"/>
 </p>
 
 ---
