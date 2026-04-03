@@ -1,8 +1,8 @@
 {
   "name": "enterprise-team",
   "displayName": "Enterprise Team - Hire a Whole Company",
-  "version": "2.0.0",
-  "description": "Complete virtual company with 75 specialized AI agents across Engineering, Product, Infrastructure, Data, Security, Marketing, Sales, Finance, Legal, and People. Staff your entire organization with one plugin.",
+  "version": "2.1.0",
+  "description": "Complete virtual company with 76 specialized AI agents across Engineering, Product, Infrastructure, Data, Security, Marketing, Sales, Finance, Legal, and People. Pipeline modes (Full/Sprint/Micro), Dev↔QA loops, quality gates, and handoff protocols.",
   "author": "Alec Gutman",
   "license": "MIT",
   "homepage": "https://github.com/Chipagosfinest/enterprise-team",
@@ -62,6 +62,7 @@
     "product-manager",
     "product-marketer",
     "qa-engineer",
+    "reality-checker",
     "recruiter",
     "sales-engineer",
     "security-auditor",
@@ -93,7 +94,9 @@
     "sales-catchall",
     "finance-catchall",
     "legal-catchall",
-    "people-catchall"
+    "people-catchall",
+    "handoff-protocol",
+    "runbooks"
   ],
   "config": { "auto-activate": true, "passive": true }
 }
