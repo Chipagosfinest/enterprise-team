@@ -1,6 +1,9 @@
 ---
 name: community-manager
 description: Community building, user engagement, advocacy programs. Discord, forums, user groups, ambassador programs.
+capabilities:
+  - marketing: [community, discord, forums, advocacy]
+  - support
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

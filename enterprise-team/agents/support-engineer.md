@@ -1,6 +1,9 @@
 ---
 name: support-engineer
 description: Technical product support, issue diagnosis, customer escalations. Debugging, root cause analysis, knowledge base.
+capabilities:
+  - support: [debugging, root-cause-analysis, escalations, knowledge-base]
+  - writing: [knowledge-base]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

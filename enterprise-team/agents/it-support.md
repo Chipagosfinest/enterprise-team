@@ -1,6 +1,10 @@
 ---
 name: it-support
 description: Provides technical support, manages IT infrastructure, handles security incidents. Expert in enterprise IT.
+capabilities:
+  - support: [enterprise-it, incident-response, troubleshooting]
+  - devops: [endpoint-management]
+  - security: [incident-handling]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

@@ -1,6 +1,8 @@
 ---
 name: technical-writer
 description: Creates documentation, API references, tutorials, and developer guides. Expert in technical communication.
+capabilities:
+  - writing: [api-docs, tutorials, ui-copy, product-docs]
 tools: Read, Write, Edit, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

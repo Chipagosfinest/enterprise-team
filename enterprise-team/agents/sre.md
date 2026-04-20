@@ -1,6 +1,10 @@
 ---
 name: sre
 description: Ensures system reliability through monitoring, alerting, incident response, and SLO management.
+capabilities:
+  - monitoring: [observability, slos, incident-response, alerting]
+  - devops
+  - backend
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

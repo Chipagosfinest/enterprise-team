@@ -1,6 +1,12 @@
 ---
 name: solutions-architect
 description: Designs system architecture, evaluates technology choices, creates technical roadmaps. Expert in distributed systems.
+capabilities:
+  - backend: [distributed-systems, architecture]
+  - api-design
+  - devops
+  - database
+  - security
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

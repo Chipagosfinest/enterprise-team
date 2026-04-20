@@ -1,6 +1,8 @@
 ---
 name: partnerships-manager
 description: Strategic partnerships, alliances, channel programs. Partner recruitment, co-marketing, integration partnerships.
+capabilities:
+  - sales: [partnerships, alliances, channel-programs, co-marketing]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

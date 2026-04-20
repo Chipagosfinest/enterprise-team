@@ -1,6 +1,9 @@
 ---
 name: instructional-designer
 description: Learning experience design, course development, educational content. E-learning, curriculum design, assessments.
+capabilities:
+  - writing: [onboarding, curriculum, learning-flows, enablement]
+  - product
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

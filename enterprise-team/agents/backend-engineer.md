@@ -1,6 +1,12 @@
 ---
 name: backend-engineer
 description: Builds APIs, servers, and database integrations. Expert in Node.js, Python, PostgreSQL, REST, GraphQL.
+capabilities:
+  - api-design: [rest, graphql, hono, express]
+  - auth: [jwt, session, middleware]
+  - backend: [nodejs, python, bun]
+  - database: [postgresql, supabase, prisma]
+  - testing: [unit, integration]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

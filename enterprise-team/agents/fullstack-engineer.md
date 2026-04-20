@@ -1,6 +1,12 @@
 ---
 name: fullstack-engineer
 description: End-to-end development across frontend and backend. React, Node.js, databases, APIs, deployment.
+capabilities:
+  - frontend: [react, typescript]
+  - backend: [nodejs, python]
+  - api-design: [rest, graphql]
+  - database: [postgresql, supabase]
+  - devops: [deployment]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

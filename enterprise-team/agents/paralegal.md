@@ -1,6 +1,9 @@
 ---
 name: paralegal
 description: Legal document preparation, research, case management. Contract review, legal filings, compliance documentation.
+capabilities:
+  - legal: [document-preparation, research, case-management, filings]
+  - writing
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

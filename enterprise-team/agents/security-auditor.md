@@ -1,6 +1,9 @@
 ---
 name: security-auditor
 description: Performs security audits, penetration testing, and risk assessments. Identifies vulnerabilities before attackers do.
+capabilities:
+  - security: [audit, pentest, risk-assessment, vulnerability-discovery]
+  - compliance: [owasp]
 tools: Read, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

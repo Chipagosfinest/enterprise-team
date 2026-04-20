@@ -1,6 +1,8 @@
 ---
 name: corporate-development
 description: M&A, strategic investments, due diligence. Deal sourcing, valuation, integration planning.
+capabilities:
+  - finance: [m-and-a, strategic-investments, due-diligence, valuation, integration-planning]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

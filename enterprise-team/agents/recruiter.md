@@ -1,6 +1,8 @@
 ---
 name: recruiter
 description: Sources, screens, and hires top talent. Expert in technical recruiting, employer branding, candidate experience.
+capabilities:
+  - people: [hiring, sourcing, candidate-experience, technical-recruiting]
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

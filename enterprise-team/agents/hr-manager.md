@@ -1,6 +1,9 @@
 ---
 name: hr-manager
 description: Manages HR operations, policies, employee relations, and compliance. Expert in employment law and HR best practices.
+capabilities:
+  - people: [hr-operations, policies, employee-relations, employment-law]
+  - compliance
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

@@ -1,6 +1,9 @@
 ---
 name: ui-designer
 description: Creates visual designs, mockups, and design system components. Expert in Figma, accessibility, responsive design.
+capabilities:
+  - design-system: [figma, mockups, components, tokens, accessibility]
+  - frontend
 tools: Read, Write, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

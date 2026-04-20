@@ -333,6 +333,69 @@ The tradeoff: More comprehensive responses, slightly more tokens. If you know ex
 
 ---
 
+## Collaboration Protocol (v2.2.0)
+
+Enterprise Team ships with a formal inter-agent collaboration protocol for multi-agent work. Every orchestrator follows the same rules, so routing, review, and escalation stay auditable.
+
+### Capability-Based Routing
+
+Agents no longer escalate up an org chart. They route by **capability**. Each agent declares capabilities in frontmatter using a controlled vocabulary (20 domains + freeform qualifiers):
+
+```yaml
+capabilities:
+  - auth: [oauth2, pkce, jwt]
+  - backend: [nodejs, python]
+  - database: [postgresql, supabase, rls]
+```
+
+When a task needs auth work, the orchestrator matches on the `auth` domain first, then refines by qualifier (`oauth2` beats `jwt` for OAuth tasks). Every routing decision produces an auditable **Routing Decision** artifact: requested capability, matched agents, selected, rejected, tie-break rule.
+
+Qualifiers are normalized (lowercase, trim, alias-mapped) so `postgres`, `Postgres`, `postgresql`, and `pg` all match. See [`capability-aliases.yaml`](enterprise-team/capability-aliases.yaml).
+
+### Task ID Gating
+
+Every task gets an orchestrator-issued ID (`DEPT-NNN`, e.g., `ENG-042`) and a declared file scope at dispatch. Agents must file a scope-expansion record before touching undeclared files. Undeclared changes are rejected — you either expand the scope with justification or revert.
+
+Optional Tier 2 enforcement via a PostToolUse hook at [`hooks/verify-task-scope.sh`](enterprise-team/hooks/verify-task-scope.sh) provides deterministic scope verification.
+
+### Risk-Classified Review (replaces self-reported confidence)
+
+Risk is classified at **dispatch** by the orchestrator, not self-reported by the agent:
+
+| Risk | Triggers | Reviewer | Evidence Required |
+|---|---|---|---|
+| **Low** | docs, configs, typo fixes | none | files changed + brief description |
+| **Medium** | features, refactors, API changes | `qa-engineer` | files + test output mapped to criteria + before/after |
+| **High** | auth, payments, migrations, security, env vars | `reality-checker` | files + tests + security implications + rollback plan + reviewer sign-off |
+
+Evidence is **conjunctive** — all listed items required, not a menu. High-risk work cannot be auto-approved; it blocks to the user if no reviewer is available.
+
+**Reclassification**: risk is re-evaluated on completion. A task dispatched as LOW that ends up touching auth middleware gets upgraded to HIGH, and the higher evidence requirements apply retroactively.
+
+### Failure-Reason Routing (replaces retry count)
+
+When a specialist escalates, they classify the failure type:
+
+- `wrong-capability` → reroute to the right capability
+- `task-too-large` → decompose into subtasks
+- `conflicting-requirements` → escalate to product-manager for spec clarity
+- `environment-issue` → route to devops-engineer or sre
+- `insufficient-context` → route to the knowledge holder
+- `unknown` → orchestrator investigates
+
+Retry count is a fallback signal. Failure-reason is the primary routing input.
+
+### Transport-Neutral Interaction Records
+
+Every consequential exchange produces an **Interaction Record** (see [`skills/handoff-protocol/SKILL.md`](enterprise-team/skills/handoff-protocol/SKILL.md)). Same schema regardless of transport:
+
+- **Agent Teams mode** (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`): delivered via `SendMessage` between teammates
+- **Fallback mode**: delivered via the `Task` tool prompt to subagents
+
+Agent Teams mode allows peers to message each other directly, but **authority stays with the orchestrator**: peers may propose, not commit. Consequential agreements must be recorded before any code changes.
+
+---
+
 ## Troubleshooting
 
 ### Routing feels inconsistent

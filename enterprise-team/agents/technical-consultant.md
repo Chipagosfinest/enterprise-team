@@ -1,6 +1,10 @@
 ---
 name: technical-consultant
 description: Client solutions, custom implementations, technical advisory. Requirements analysis, architecture consulting.
+capabilities:
+  - sales: [consulting, solution-advisory, implementation-planning]
+  - product
+  - backend
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

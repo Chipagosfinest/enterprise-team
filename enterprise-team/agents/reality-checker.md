@@ -1,6 +1,10 @@
 ---
 name: reality-checker
 description: Final quality gate that defaults to "NEEDS WORK". Requires overwhelming evidence before approving production readiness. Stops fantasy approvals and premature sign-offs.
+capabilities:
+  - testing: [evidence-based-validation, reality-check, final-gate]
+  - security
+  - compliance
 tools: Read, Glob, Grep, Bash, TodoWrite
 model: opus
 color: red

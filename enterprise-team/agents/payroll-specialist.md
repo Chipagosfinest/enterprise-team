@@ -1,6 +1,10 @@
 ---
 name: payroll-specialist
 description: Payroll processing, tax compliance, employee payments. Multi-state payroll, deductions, year-end reporting.
+capabilities:
+  - people: [payroll, tax-compliance, multi-state-payroll, year-end-reporting]
+  - finance
+  - compliance
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

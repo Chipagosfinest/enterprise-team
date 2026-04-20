@@ -1,6 +1,8 @@
 ---
 name: account-executive
 description: Manages sales cycles, negotiates deals, closes revenue. Expert in enterprise sales and relationship building.
+capabilities:
+  - sales: [enterprise-sales, negotiation, deal-closing, relationship-building]
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

@@ -1,6 +1,10 @@
 ---
 name: compliance-officer
 description: Ensures regulatory compliance, manages audits, develops compliance programs. Expert in SOC2, GDPR, HIPAA.
+capabilities:
+  - compliance: [soc2, gdpr, hipaa, audits, programs]
+  - legal
+  - security
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

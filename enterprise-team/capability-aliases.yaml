@@ -1,0 +1,131 @@
+# Capability Qualifier Aliases
+#
+# Controlled domains (first-level) + qualifier aliases (second-level).
+# All qualifier matching is case-insensitive, trimmed, whitespace-collapsed.
+# Aliases map variant spellings to a canonical form.
+#
+# Routing rule: match on domain first (always works), then qualifier (bonus precision).
+# If no qualifier matches, route on domain alone.
+
+# ===== CONTROLLED DOMAINS =====
+# These are the ONLY valid first-level capability values.
+# Every agent frontmatter must use one of these as the key.
+
+domains:
+  - api-design        # REST, GraphQL, endpoint architecture, versioning
+  - auth              # Authentication, authorization, sessions, OAuth, tokens
+  - backend           # Server logic, business rules, middleware, runtimes
+  - blockchain        # Smart contracts, Web3, DeFi, wallets
+  - ci-cd             # Pipelines, builds, deployment automation
+  - compliance        # SOC2, GDPR, HIPAA, regulatory requirements
+  - data-pipeline     # ETL, warehousing, streaming, orchestration
+  - database          # Schema, queries, migrations, RLS, indexing
+  - design-system     # UI patterns, component libraries, tokens, guidelines
+  - devops            # Infrastructure, containers, orchestration, IaC
+  - finance           # Accounting, reporting, modeling, M&A
+  - frontend          # Browser, UI frameworks, CSS, accessibility
+  - legal             # Contracts, IP, corporate matters, counsel
+  - marketing         # Campaigns, SEO, content, brand, growth
+  - ml                # Models, training, inference, MLOps
+  - mobile            # iOS, Android, cross-platform
+  - monitoring        # Observability, alerts, SLOs, incident response
+  - people            # HR, recruiting, compensation, talent development
+  - product           # Requirements, user flows, roadmaps, strategy
+  - sales             # Sales cycles, partnerships, customer success
+  - security          # Hardening, audits, pen testing, vulnerability fixes
+  - support           # Customer support, escalations, debugging
+  - testing           # Unit, integration, e2e, test strategy
+  - ux-research       # User interviews, surveys, usability testing
+  - writing           # Docs, API refs, UI copy, tutorials
+
+# ===== QUALIFIER ALIASES =====
+# Canonical forms → variant spellings. Normalize before matching.
+# Agents may use any listed alias; orchestrator canonicalizes at routing time.
+
+qualifiers:
+  # Auth
+  oauth2: [oauth-2.0, oauth 2, oauth2.0, oauth]
+  jwt: [json-web-token, json web token]
+  pkce: [proof-key-code-exchange]
+  saml: [saml2]
+
+  # Backend / Runtimes
+  nodejs: [node, node.js, node-js]
+  python: [py, python3]
+  bun: [bunjs]
+  deno: [denojs]
+  typescript: [ts]
+
+  # Frontend Frameworks
+  nextjs: [next.js, next-js, next]
+  react: [reactjs, react.js]
+  vue: [vuejs, vue.js]
+  svelte: [sveltejs]
+  tailwind: [tailwindcss, tailwind-css]
+
+  # Databases
+  postgresql: [postgres, pg, psql]
+  mysql: [mariadb]
+  mongodb: [mongo]
+  supabase: [supabase-db]
+  redis: [valkey]
+  prisma: [prisma-orm]
+
+  # Security / DB Concepts
+  rls: [row-level-security, row level security]
+
+  # Mobile
+  react-native: [reactnative, rn]
+  swift: [swiftui]
+  kotlin: [kotlinlang]
+  flutter: [flutterdev]
+
+  # Infrastructure
+  docker: [dockerize]
+  kubernetes: [k8s, kube]
+  terraform: [tf, iac-terraform]
+  vercel: [vercel-platform]
+  railway: [railway-app]
+
+  # Data Tools
+  airflow: [apache-airflow]
+  dbt: [data-build-tool]
+  spark: [apache-spark]
+  kafka: [apache-kafka]
+
+  # ML Frameworks
+  pytorch: [torch]
+  tensorflow: [tf, tensorflow2]
+  huggingface: [hf, transformers]
+
+  # API
+  rest: [restful, rest-api]
+  graphql: [gql]
+  grpc: [grpc-api]
+
+  # Compliance
+  soc2: [soc-2, soc 2]
+  gdpr: [general-data-protection-regulation]
+  hipaa: [health-insurance-portability]
+  pci: [pci-dss]
+
+  # Testing
+  jest: [jestjs]
+  playwright: [pw, playwright-test]
+  cypress: [cypress-io]
+  vitest: [vite-test]
+
+# ===== NORMALIZATION RULES =====
+# Applied to every qualifier string before matching:
+#   1. lowercase
+#   2. trim leading/trailing whitespace
+#   3. collapse internal whitespace to single space
+#   4. strip surrounding quotes
+#   5. check alias map (fall back to input if no match)
+
+normalization:
+  case: lowercase
+  whitespace: collapse
+  quotes: strip
+  alias_lookup: true
+  fallback: input-as-is

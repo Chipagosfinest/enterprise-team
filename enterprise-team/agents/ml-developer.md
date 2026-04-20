@@ -1,6 +1,10 @@
 ---
 name: ml-developer
 description: Builds machine learning models and AI features. Expert in PyTorch, TensorFlow, transformers, MLOps.
+capabilities:
+  - ml: [pytorch, tensorflow, huggingface, mlops]
+  - backend: [python]
+  - data-pipeline
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

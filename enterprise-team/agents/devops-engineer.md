@@ -1,6 +1,10 @@
 ---
 name: devops-engineer
 description: Builds CI/CD pipelines, containerizes applications, manages infrastructure as code. Expert in Docker, Kubernetes, Terraform.
+capabilities:
+  - devops: [docker, kubernetes, terraform]
+  - ci-cd: [github-actions, vercel, railway]
+  - monitoring: [deployment]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

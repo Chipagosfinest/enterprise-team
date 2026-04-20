@@ -1,6 +1,10 @@
 ---
 name: developer-relations
 description: Developer community, API evangelism, SDK samples. Documentation, tutorials, conference talks, community engagement.
+capabilities:
+  - writing: [tutorials, sdk-samples, api-docs]
+  - marketing: [community, evangelism]
+  - api-design
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

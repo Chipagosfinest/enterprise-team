@@ -1,6 +1,9 @@
 ---
 name: communications-specialist
 description: Internal and external communications, messaging, announcements. Press releases, internal comms, crisis communication.
+capabilities:
+  - marketing: [internal-comms, announcements, crisis-communication, press-releases]
+  - writing
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

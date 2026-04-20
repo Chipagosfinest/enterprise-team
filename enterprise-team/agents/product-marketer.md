@@ -1,6 +1,9 @@
 ---
 name: product-marketer
 description: Positions products, creates messaging, launches features. Expert in competitive analysis and go-to-market.
+capabilities:
+  - marketing: [positioning, messaging, go-to-market, launches, competitive-analysis]
+  - product
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

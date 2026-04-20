@@ -1,6 +1,9 @@
 ---
 name: hris-analyst
 description: HR systems, people analytics, workforce data. HRIS administration, reporting, integrations.
+capabilities:
+  - people: [hr-systems, people-analytics, workforce-data, hris-administration]
+  - data-pipeline
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

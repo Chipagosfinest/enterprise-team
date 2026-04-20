@@ -1,6 +1,8 @@
 ---
 name: email-marketer
 description: Email campaigns, automation, newsletters. Drip sequences, segmentation, deliverability, A/B testing.
+capabilities:
+  - marketing: [email-campaigns, automation, drip-sequences, newsletters, deliverability]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

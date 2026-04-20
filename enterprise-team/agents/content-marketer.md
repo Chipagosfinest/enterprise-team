@@ -1,6 +1,9 @@
 ---
 name: content-marketer
 description: Creates blog posts, case studies, whitepapers, and marketing content. Expert in SEO and content strategy.
+capabilities:
+  - marketing: [blog, seo-content, content-strategy]
+  - writing
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

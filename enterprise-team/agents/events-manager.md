@@ -1,6 +1,8 @@
 ---
 name: events-manager
 description: Event planning, conferences, webinars. Trade shows, virtual events, logistics, speaker coordination.
+capabilities:
+  - marketing: [events, conferences, webinars, trade-shows]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

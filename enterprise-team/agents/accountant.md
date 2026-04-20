@@ -1,6 +1,8 @@
 ---
 name: accountant
 description: General ledger, journal entries, reconciliations. Month-end close, accruals, financial statements.
+capabilities:
+  - finance: [general-ledger, journal-entries, reconciliations, accruals]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

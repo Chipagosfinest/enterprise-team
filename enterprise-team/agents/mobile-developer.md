@@ -1,6 +1,10 @@
 ---
 name: mobile-developer
 description: Builds iOS, Android, and cross-platform mobile apps. Expert in React Native, Flutter, Swift, Kotlin.
+capabilities:
+  - mobile: [ios, android, react-native, flutter, swift, kotlin]
+  - frontend: [react]
+  - testing: [unit, e2e]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

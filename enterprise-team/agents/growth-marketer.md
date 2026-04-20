@@ -1,6 +1,8 @@
 ---
 name: growth-marketer
 description: Drives user acquisition, activation, and retention through data-driven marketing. Expert in funnels, analytics, experimentation.
+capabilities:
+  - marketing: [paid-ads, growth, conversion-optimization, funnels, experimentation]
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---
