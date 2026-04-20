@@ -280,8 +280,9 @@ When the orchestrator routes a task to an agent, it produces an auditable **Rout
 | Tie-break rule applied | qualifier-match (highest priority) |
 ```
 
-**Tie-breaking rules** (in priority order):
-1. Qualifier match — agent whose qualifiers include the requested qualifier
-2. Fewer current assignments — agent not already busy on something
-3. Same department — only as final tiebreaker, not default
-4. If still tied — orchestrator picks and documents why in the Reason field
+**Tie-breaking rules** (in priority order, all deterministic from current task context):
+1. Qualifier match count — agent whose qualifiers cover the most requested qualifiers
+2. Same-department affinity — agent in the same department as the requester (final tiebreaker, not default)
+3. If still tied — orchestrator picks and documents exactly why in the Reason field
+
+Load-balancing tie-breaks (e.g., "fewer current assignments") are intentionally excluded: there is no durable assignment ledger, so any such rule would be non-auditable across sessions.

@@ -33,7 +33,7 @@ Routing algorithm:
 1. Extract the capability requirement from the task (domain + optional qualifiers).
 2. Normalize qualifiers (lowercase, trim, check alias map in `capability-aliases.yaml`).
 3. Match agents whose frontmatter declares the domain.
-4. Tie-break in this priority order: (1) qualifier match, (2) fewer current assignments, (3) same department, (4) pick and document why.
+4. Tie-break in this priority order: (1) qualifier match count, (2) same-department affinity, (3) pick one and document exactly why in the Routing Decision `Reason` field. No load-balancing tie-breaks — there is no durable assignment ledger, so any such rule would be non-auditable.
 5. Emit a **Routing Decision** artifact with requested capability, matched agents, selected, rejected, and tie-break rule.
 
 ## Task ID Gating

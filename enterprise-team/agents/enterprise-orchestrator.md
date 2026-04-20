@@ -49,7 +49,7 @@ Route to 2-4 specialists. Bug fix, audit, campaign, or investigation.
 
 ## Capability-Based Routing
 
-**Do not route by org chart.** Route by what capability the task needs. Agents declare their capabilities in frontmatter using the controlled vocabulary from `capability-aliases.yaml` (20 domains × freeform qualifiers).
+**Do not route by org chart.** Route by what capability the task needs. Agents declare their capabilities in frontmatter using the controlled vocabulary from `capability-aliases.yaml` (25 domains × freeform qualifiers). The `capabilities:` field is NOT a Claude Code runtime config field — it is a protocol convention that the orchestrator enforces by reading `capability-index.yaml` (generated from agent frontmatter by `scripts/build-capability-index.sh`).
 
 ### Agent Capability Format
 
@@ -63,21 +63,23 @@ capabilities:
 ### Routing Algorithm
 
 1. **Extract capability requirement from task**
-   - Required domain (from the 20 controlled domains)
+   - Required domain (from the 25 controlled domains in `capability-aliases.yaml`)
    - Optional qualifiers (specific tech, method, or sub-topic)
 
 2. **Normalize qualifiers**
    - Lowercase, trim, collapse whitespace, check alias map in `capability-aliases.yaml`
 
-3. **Match agents**
+3. **Match agents via `capability-index.yaml`**
+   - Read the generated index (not the 76 individual agent files)
    - Primary filter: agent declares the required domain
    - Bonus: agent's qualifiers include one or more of the requested qualifiers
 
-4. **Apply tie-breaking** (in priority order)
-   1. Qualifier match — agent whose qualifiers include the requested qualifier
-   2. Fewer current assignments — agent not already busy on something
-   3. Same department — only as final tiebreaker, not default
-   4. If still tied — pick one and document why
+4. **Apply tie-breaking** (in priority order, all deterministic from current task context)
+   1. Qualifier match count — agent whose qualifiers cover the most requested qualifiers
+   2. Same-department affinity — agent in the same department as the requester (final tiebreaker, not default)
+   3. If still tied — pick one and document exactly why in the Routing Decision `Reason` field
+
+   Note: load-balancing tie-breaks (e.g., "fewer current assignments") are intentionally excluded — no durable assignment ledger exists, so any such rule would be non-auditable.
 
 5. **Emit Routing Decision** — every routing decision produces an auditable artifact:
 
@@ -107,9 +109,12 @@ When spawning an agent, always include in the Task prompt (or SendMessage payloa
 | Task ID | ENG-042 |
 | Assigned to | backend-engineer |
 | Expected file scope | [src/auth/middleware.ts, src/auth/oauth.ts, tests/auth/*.test.ts] |
+| Baseline SHA | <git rev-parse HEAD at dispatch time> |
 | Risk Class | medium |
 | Capability routed | auth: [jwt, session] |
 ```
+
+**Baseline SHA capture**: before spawning, run `git rev-parse HEAD` and include that SHA in the assignment. The Tier 2 hook uses this baseline to measure "files changed during this task" without being confused by pre-existing dirty state. For worktree-isolated agents, capture the worktree's base commit SHA.
 
 **Task ID format**: `DEPT-NNN` where DEPT is ENG, PRO, INF, DAT, SEC, MKT, SAL, FIN, LEG, or PEO, and NNN is a monotonically increasing number within the session (track via TodoWrite).
 
@@ -210,6 +215,8 @@ For every implementation task:
 ## Agent Teams Mode (when `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`)
 
 In this mode, spawn teammates instead of subagents. Teammates can message each other directly via SendMessage.
+
+**Implementation note**: Claude Code's teammate runs do not inherit skills from subagent definitions the same way the main session does. To keep the protocol genuinely transport-neutral, the enterprise-orchestrator must **inline the Interaction Record schema** into the teammate spawn payload (via the `--agents` JSON or the spawn prompt). The `handoff-protocol` skill is the canonical source — copy its templates into the spawn payload rather than assuming the teammate will load the skill itself.
 
 **Authority boundaries** (enforce strictly):
 

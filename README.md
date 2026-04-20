@@ -339,7 +339,7 @@ Enterprise Team ships with a formal inter-agent collaboration protocol for multi
 
 ### Capability-Based Routing
 
-Agents no longer escalate up an org chart. They route by **capability**. Each agent declares capabilities in frontmatter using a controlled vocabulary (20 domains + freeform qualifiers):
+Agents no longer escalate up an org chart. They route by **capability**. Each agent declares capabilities in frontmatter using a controlled vocabulary (25 domains + freeform qualifiers):
 
 ```yaml
 capabilities:
@@ -352,11 +352,28 @@ When a task needs auth work, the orchestrator matches on the `auth` domain first
 
 Qualifiers are normalized (lowercase, trim, alias-mapped) so `postgres`, `Postgres`, `postgresql`, and `pg` all match. See [`capability-aliases.yaml`](enterprise-team/capability-aliases.yaml).
 
+**Honest note on implementation**: `capabilities:` is NOT a Claude Code runtime config field — the runtime ignores it. It is a protocol convention. The orchestrator reads [`capability-index.yaml`](enterprise-team/capability-index.yaml), which is auto-generated from agent frontmatter by [`scripts/build-capability-index.sh`](enterprise-team/scripts/build-capability-index.sh). Regenerate after any frontmatter change; CI should diff-check the generated index to catch drift.
+
+**Tie-break rules** (deterministic from current task context):
+1. Qualifier match count — agent covering the most requested qualifiers
+2. Same-department affinity — only as final tiebreaker
+3. If still tied — orchestrator picks one and documents exactly why
+
+Load-balancing ("fewer current assignments") is intentionally excluded: no durable assignment ledger exists, so any such rule would be non-auditable across sessions.
+
 ### Task ID Gating
 
 Every task gets an orchestrator-issued ID (`DEPT-NNN`, e.g., `ENG-042`) and a declared file scope at dispatch. Agents must file a scope-expansion record before touching undeclared files. Undeclared changes are rejected — you either expand the scope with justification or revert.
 
-Optional Tier 2 enforcement via a PostToolUse hook at [`hooks/verify-task-scope.sh`](enterprise-team/hooks/verify-task-scope.sh) provides deterministic scope verification.
+**Three tiers of enforcement** (use what fits your setup):
+
+| Tier | Mechanism | Binding |
+|---|---|---|
+| **0** | Protocol convention — Interaction Records, declared scope, risk class | Prompt-level; model behavior, not runtime constraint |
+| **1** | Orchestrator verifies at completion — reads git diff, compares against declared scope | Prompt-level with tool-backed verification (Grep, Read, Bash) |
+| **2** | Optional PostToolUse hook — [`hooks/verify-task-scope.sh`](enterprise-team/hooks/verify-task-scope.sh) | Deterministic; shell script rejects work products on scope violation |
+
+The Tier 2 hook requires the orchestrator to declare both `## Expected file scope: [...]` **and** `## Baseline SHA: <sha>` in the Task prompt. The hook diffs against that baseline, not the full working tree, so it does not produce false violations from unrelated dirty state. If either declaration is missing, the hook gracefully degrades to Tier 1.
 
 ### Risk-Classified Review (replaces self-reported confidence)
 
