@@ -138,6 +138,25 @@ Can include MCP server configurations for external tools.
 ### LSP Plugins
 Can configure language server protocol servers.
 
+## Editing the `enterprise-team` plugin — capability frontmatter
+
+The `enterprise-team` plugin uses a generated `capability-index.yaml` as its routing substrate. If you edit any of the following:
+
+- Any agent file under `enterprise-team/agents/*.md` (specifically its `capabilities:` frontmatter block)
+- `enterprise-team/capability-aliases.yaml` (controlled domain list or qualifier aliases)
+- `enterprise-team/scripts/build-capability-index.sh` (the generator itself)
+
+...you **must regenerate the index** and commit it alongside your changes:
+
+```bash
+./enterprise-team/scripts/build-capability-index.sh
+git add enterprise-team/capability-index.yaml
+```
+
+CI enforces this via `.github/workflows/capability-index-check.yml` — a PR will fail if the committed index doesn't match a fresh regeneration. The check also fails if any controlled domain has zero agents declaring it (usually a typo in the domain name).
+
+The generator is deterministic (same inputs → same output, except for the `generated_at` timestamp which CI ignores when diffing).
+
 ## Versioning
 
 Use semantic versioning:
