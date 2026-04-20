@@ -189,6 +189,8 @@ That's it. The plugin is now available in any project. Then just ask for what yo
 
 The orchestrator routes to the right specialists automatically.
 
+By default, the plugin now activates `enterprise-orchestrator` as the main agent through `settings.json`, so you are dropped into the routing layer instead of hoping Claude picks the right specialist on its own.
+
 ---
 
 ## Departments & Specialists
@@ -332,6 +334,20 @@ The tradeoff: More comprehensive responses, slightly more tokens. If you know ex
 ---
 
 ## Troubleshooting
+
+### Routing feels inconsistent
+
+Make sure the plugin is reloaded after upgrade:
+
+```bash
+/reload-plugins
+```
+
+This version ships a default `settings.json` that activates `enterprise-orchestrator` automatically. If you are still seeing generalist behavior, confirm the plugin is enabled and that another plugin is not overriding the active default agent.
+
+### Codex compatibility
+
+This repo also ships [`enterprise-team/AGENTS.md`](enterprise-team/AGENTS.md) so the same department-routing model can be reused in Codex-style environments. Claude Code uses the plugin manifest and `settings.json`; Codex-style agents can read the AGENTS instructions as the equivalent orchestration entrypoint.
 
 ### Install returns no output
 
