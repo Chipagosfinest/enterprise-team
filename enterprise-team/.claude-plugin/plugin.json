@@ -8,7 +8,5 @@
   "homepage": "https://github.com/Chipagosfinest/enterprise-team",
   "repository": "https://github.com/Chipagosfinest/enterprise-team",
   "keywords": ["agents", "team", "specialists", "enterprise", "orchestration", "engineering", "marketing", "sales", "finance", "legal"],
-  "agents": "./agents/",
-  "skills": "./skills/",
   "license": "MIT"
 }

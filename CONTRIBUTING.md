@@ -41,11 +41,11 @@ Create `your-plugin-name/.claude-plugin/plugin.json`:
   },
   "license": "MIT",
   "homepage": "https://github.com/yourname/your-plugin",
-  "repository": "https://github.com/yourname/your-plugin",
-  "agents": "./agents/",
-  "skills": "./skills/"
+  "repository": "https://github.com/yourname/your-plugin"
 }
 ```
+
+For standard plugin layouts, omit `agents` and `skills` from the manifest and let Claude Code auto-discover `agents/` and `skills/` from the plugin root. Only add custom component-path fields when you need non-default locations.
 
 If you want a plugin agent to become the default main thread when the plugin is enabled, add a root-level `settings.json`:
 
