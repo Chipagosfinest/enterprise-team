@@ -1,0 +1,117 @@
+name: capability-index drift check
+
+# Prevents silent drift between agent frontmatter (capabilities: blocks) and
+# the generated enterprise-team/capability-index.yaml which the orchestrator
+# reads as its routing substrate.
+#
+# SECURITY NOTE: This workflow does not read any untrusted user input from
+# GitHub event payloads (no issue titles, PR bodies, commit messages, etc.)
+# All shell variables are locally defined. No injection surface.
+
+on:
+  pull_request:
+    paths:
+      - 'enterprise-team/agents/**'
+      - 'enterprise-team/capability-aliases.yaml'
+      - 'enterprise-team/capability-index.yaml'
+      - 'enterprise-team/scripts/build-capability-index.sh'
+      - '.github/workflows/capability-index-check.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'enterprise-team/agents/**'
+      - 'enterprise-team/capability-aliases.yaml'
+      - 'enterprise-team/capability-index.yaml'
+      - 'enterprise-team/scripts/build-capability-index.sh'
+      - '.github/workflows/capability-index-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check-index-drift:
+    name: Verify capability-index.yaml matches agent frontmatter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Verify generator script is executable
+        run: |
+          set -euo pipefail
+          SCRIPT=enterprise-team/scripts/build-capability-index.sh
+          if [ ! -x "$SCRIPT" ]; then
+            echo "ERROR: $SCRIPT is not executable."
+            echo "Remediation: chmod +x $SCRIPT && git add $SCRIPT && git commit --amend --no-edit"
+            exit 1
+          fi
+
+      - name: Verify checked-in index exists
+        run: |
+          set -euo pipefail
+          INDEX=enterprise-team/capability-index.yaml
+          if [ ! -f "$INDEX" ]; then
+            echo "ERROR: $INDEX is missing from the repo."
+            echo "Remediation: ./enterprise-team/scripts/build-capability-index.sh && git add $INDEX && git commit"
+            exit 1
+          fi
+
+      - name: Regenerate capability-index.yaml and compare
+        run: |
+          set -euo pipefail
+          INDEX=enterprise-team/capability-index.yaml
+
+          # Capture the committed version BEFORE regenerating (git show is
+          # authoritative — does not depend on working-tree state).
+          CHECKED_IN=$(mktemp)
+          git show HEAD:"$INDEX" | grep -v '^generated_at: ' > "$CHECKED_IN"
+
+          # Regenerate — this overwrites the working-tree copy.
+          ./enterprise-team/scripts/build-capability-index.sh
+
+          FRESH=$(mktemp)
+          grep -v '^generated_at: ' "$INDEX" > "$FRESH"
+
+          if ! diff -u "$CHECKED_IN" "$FRESH" > /tmp/index-diff.txt; then
+            echo "::error::capability-index.yaml is out of sync with agent frontmatter."
+            echo ""
+            echo "=== Diff (committed vs regenerated) ==="
+            cat /tmp/index-diff.txt
+            echo ""
+            echo "=== Remediation ==="
+            echo "Someone edited agent frontmatter, capability-aliases.yaml, or"
+            echo "the generator script without regenerating the index."
+            echo ""
+            echo "Run locally:"
+            echo "  ./enterprise-team/scripts/build-capability-index.sh"
+            echo "  git add enterprise-team/capability-index.yaml"
+            echo "  git commit --amend --no-edit   # or a new commit"
+            echo "  git push"
+            echo ""
+            echo "The index is the machine-readable routing substrate the"
+            echo "enterprise-orchestrator reads at runtime. It must track the"
+            echo "capabilities: blocks in agents/*.md frontmatter."
+            exit 1
+          fi
+
+          echo "OK: capability-index.yaml matches agent frontmatter."
+
+      - name: Verify every controlled domain has at least one agent
+        run: |
+          set -euo pipefail
+          # Generator warns about missing domains on stderr. Treat warning
+          # as a hard failure in CI.
+          OUTPUT=$(./enterprise-team/scripts/build-capability-index.sh 2>&1)
+          if echo "$OUTPUT" | grep -q '^WARNING:'; then
+            echo "::error::Some controlled domains have no agents declaring them."
+            echo "$OUTPUT"
+            echo ""
+            echo "Remediation: either remove the unused domain from"
+            echo "enterprise-team/capability-aliases.yaml OR add a capability"
+            echo "declaration for it to an appropriate agent's frontmatter."
+            exit 1
+          fi
+          echo "OK: every controlled domain has at least one agent."

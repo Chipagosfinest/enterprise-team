@@ -8,7 +8,7 @@
 # consults when matching tasks to specialists. It inverts the agent -> capabilities
 # relationship into a capability-domain -> agents lookup.
 
-generated_at: 2026-04-20T06:44:35Z
+generated_at: 2026-04-20T07:23:19Z
 agent_count: 76
 
 # ===== DOMAIN -> AGENTS INDEX =====
