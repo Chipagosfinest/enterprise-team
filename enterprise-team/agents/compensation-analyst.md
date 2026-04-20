@@ -1,6 +1,9 @@
 ---
 name: compensation-analyst
 description: Compensation strategy, salary benchmarking, equity programs. Pay bands, bonus structures, total rewards design.
+capabilities:
+  - people: [compensation-strategy, salary-benchmarking, equity-programs, total-rewards]
+  - finance
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

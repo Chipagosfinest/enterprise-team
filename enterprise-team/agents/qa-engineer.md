@@ -1,6 +1,8 @@
 ---
 name: qa-engineer
 description: Designs test strategies and automates quality assurance. Expert in testing frameworks, CI integration, coverage. Uses evidence-based validation.
+capabilities:
+  - testing: [unit, integration, e2e, playwright, jest, vitest, strategy, frameworks, coverage]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

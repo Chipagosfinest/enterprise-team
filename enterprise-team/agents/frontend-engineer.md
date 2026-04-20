@@ -1,6 +1,10 @@
 ---
 name: frontend-engineer
 description: Builds React, Vue, and web UI components. Expert in TypeScript, CSS, state management, accessibility.
+capabilities:
+  - frontend: [react, vue, typescript, tailwind, css, state-management]
+  - design-system: [components, accessibility]
+  - testing: [unit, e2e]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

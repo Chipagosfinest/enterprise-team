@@ -1,6 +1,9 @@
 ---
 name: technical-business-analyst
 description: Requirements gathering, process mapping, technical specifications. Bridge between business needs and engineering.
+capabilities:
+  - product: [requirements, process-mapping, specifications]
+  - writing
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

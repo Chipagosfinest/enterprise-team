@@ -1,6 +1,9 @@
 ---
 name: embedded-engineer
 description: Firmware, IoT devices, low-level systems. C/C++, RTOS, hardware interfaces, microcontrollers.
+capabilities:
+  - backend: [c, cpp, rtos, firmware, microcontrollers, iot]
+  - testing: [hardware-in-the-loop]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

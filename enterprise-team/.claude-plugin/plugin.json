@@ -1,7 +1,7 @@
 {
   "name": "enterprise-team",
   "description": "75 specialized AI agents across Engineering, Product, Infrastructure, Data, Security, Marketing, Sales, Finance, Legal, and People. Automatic routing to the right specialist.",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": {
     "name": "Alec Gutman"
   },

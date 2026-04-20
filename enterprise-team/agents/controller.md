@@ -1,6 +1,9 @@
 ---
 name: controller
 description: Manages accounting, financial reporting, and internal controls. Expert in GAAP and financial operations.
+capabilities:
+  - finance: [financial-reporting, gaap, internal-controls, month-end-close]
+  - compliance
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

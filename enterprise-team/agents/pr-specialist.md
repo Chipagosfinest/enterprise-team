@@ -1,6 +1,9 @@
 ---
 name: pr-specialist
 description: Public relations, media outreach, press coverage. Press releases, journalist relations, media strategy.
+capabilities:
+  - marketing: [press-releases, media-relations, coverage]
+  - writing
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

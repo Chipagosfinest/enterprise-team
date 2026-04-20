@@ -1,6 +1,9 @@
 ---
 name: design-strategist
 description: Design strategy, design systems, user experience vision. Design ops, design principles, experience strategy.
+capabilities:
+  - design-system: [experience-strategy, design-ops, guidelines]
+  - product
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

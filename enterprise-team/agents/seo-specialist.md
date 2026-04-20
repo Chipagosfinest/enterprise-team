@@ -1,6 +1,8 @@
 ---
 name: seo-specialist
 description: Search engine optimization, keyword research, technical SEO. Rankings, organic traffic, content optimization.
+capabilities:
+  - marketing: [seo, keywords, technical-seo, rankings]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

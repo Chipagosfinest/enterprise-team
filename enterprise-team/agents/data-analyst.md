@@ -1,6 +1,9 @@
 ---
 name: data-analyst
 description: Analyzes data, creates dashboards, generates insights. Expert in SQL, Python, BI tools.
+capabilities:
+  - data-pipeline: [sql, python, bi, dashboards, insights]
+  - database: [sql]
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

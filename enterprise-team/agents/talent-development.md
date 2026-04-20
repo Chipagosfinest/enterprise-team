@@ -1,6 +1,9 @@
 ---
 name: talent-development
 description: Learning programs, career development, performance management. Training, coaching, succession planning.
+capabilities:
+  - people: [learning-programs, career-development, performance-management, coaching, succession-planning]
+  - writing
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

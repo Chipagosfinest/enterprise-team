@@ -1,6 +1,9 @@
 ---
 name: web-designer
 description: Website design, landing pages, user interfaces. Figma, responsive design, conversion optimization.
+capabilities:
+  - design-system: [landing-pages, web-design, conversion-optimization]
+  - frontend
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

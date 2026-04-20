@@ -1,6 +1,10 @@
 ---
 name: data-engineer
 description: Builds ETL pipelines, data warehouses, and analytics infrastructure. Expert in SQL, Python, Airflow, dbt.
+capabilities:
+  - data-pipeline: [etl, airflow, dbt, data-warehouse]
+  - database: [sql, postgresql]
+  - backend: [python]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

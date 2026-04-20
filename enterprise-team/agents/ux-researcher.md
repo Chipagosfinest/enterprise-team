@@ -1,6 +1,9 @@
 ---
 name: ux-researcher
 description: Conducts user research to uncover needs and validate solutions. Expert in interviews, usability testing, surveys.
+capabilities:
+  - ux-research: [interviews, surveys, usability-testing, personas]
+  - product
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

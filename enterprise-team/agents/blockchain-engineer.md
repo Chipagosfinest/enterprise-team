@@ -1,6 +1,10 @@
 ---
 name: blockchain-engineer
 description: Smart contracts, DeFi protocols, Web3 integration. Solidity, Ethereum, Layer 2s, wallet integration.
+capabilities:
+  - blockchain: [solidity, ethereum, layer-2, defi, smart-contracts, web3, wallets]
+  - security: [smart-contract-audit]
+  - backend
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

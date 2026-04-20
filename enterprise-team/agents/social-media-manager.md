@@ -1,6 +1,8 @@
 ---
 name: social-media-manager
 description: Social media strategy, content calendars, community engagement. Twitter, LinkedIn, Instagram, TikTok growth.
+capabilities:
+  - marketing: [social-media, content-calendars, twitter, linkedin, instagram, tiktok]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

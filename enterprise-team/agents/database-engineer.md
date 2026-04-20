@@ -1,6 +1,9 @@
 ---
 name: database-engineer
 description: Designs schemas, optimizes queries, manages migrations. Expert in PostgreSQL, Supabase, Prisma, Redis.
+capabilities:
+  - database: [postgresql, mysql, supabase, prisma, rls, migrations, indexing]
+  - backend
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

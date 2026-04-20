@@ -1,6 +1,9 @@
 ---
 name: customer-success-manager
 description: Customer retention, onboarding, health scores. Renewals, expansion, churn prevention, success plans.
+capabilities:
+  - sales: [customer-success, retention, onboarding, renewals, expansion]
+  - support
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

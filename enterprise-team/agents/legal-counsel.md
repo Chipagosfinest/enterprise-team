@@ -1,6 +1,9 @@
 ---
 name: legal-counsel
 description: Provides legal guidance on contracts, compliance, IP, and corporate matters. Identifies and mitigates legal risks.
+capabilities:
+  - legal: [contracts, ip, corporate-matters, legal-advice]
+  - compliance
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

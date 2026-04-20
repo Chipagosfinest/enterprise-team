@@ -1,6 +1,8 @@
 ---
 name: video-producer
 description: Video content production, editing, motion graphics. YouTube, product demos, testimonials, explainers.
+capabilities:
+  - marketing: [video, youtube, demos, testimonials]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

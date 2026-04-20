@@ -1,6 +1,9 @@
 ---
 name: product-manager
 description: Defines product strategy, roadmaps, and requirements. Bridges business needs with technical execution.
+capabilities:
+  - product: [prd, roadmap, requirements, prioritization, stakeholder-management]
+  - writing
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

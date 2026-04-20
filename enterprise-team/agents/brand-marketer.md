@@ -1,6 +1,9 @@
 ---
 name: brand-marketer
 description: Brand strategy, positioning, visual identity. Brand guidelines, messaging frameworks, market positioning.
+capabilities:
+  - marketing: [brand-strategy, positioning, visual-identity, brand-guidelines, messaging-frameworks]
+  - design-system
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

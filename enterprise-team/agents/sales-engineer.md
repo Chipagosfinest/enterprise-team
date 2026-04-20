@@ -1,6 +1,10 @@
 ---
 name: sales-engineer
 description: Provides technical sales support, demos, POCs, and technical validation. Expert in translating tech to business value.
+capabilities:
+  - sales: [technical-demos, pocs, technical-validation]
+  - backend
+  - api-design
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

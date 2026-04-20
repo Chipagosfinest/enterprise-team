@@ -1,6 +1,9 @@
 ---
 name: business-developer
 description: New business opportunities, market expansion, strategic deals. Lead generation, market analysis, opportunity development.
+capabilities:
+  - sales: [business-development, lead-generation, market-expansion]
+  - product
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

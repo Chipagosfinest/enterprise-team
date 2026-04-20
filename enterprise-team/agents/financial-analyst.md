@@ -1,6 +1,8 @@
 ---
 name: financial-analyst
 description: Builds financial models, forecasts, and analysis. Expert in Excel, financial statements, valuation.
+capabilities:
+  - finance: [modeling, forecasting, budgeting, financial-statements, valuation]
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

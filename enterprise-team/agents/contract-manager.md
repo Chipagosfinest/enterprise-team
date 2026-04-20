@@ -1,6 +1,8 @@
 ---
 name: contract-manager
 description: Manages contract lifecycle, negotiations, and vendor relationships. Expert in commercial contracts.
+capabilities:
+  - legal: [contract-lifecycle, negotiations, vendor-management]
 tools: Read, Glob, Grep, WebSearch, TodoWrite
 model: opus
 ---

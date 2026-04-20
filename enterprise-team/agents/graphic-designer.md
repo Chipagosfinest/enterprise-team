@@ -1,6 +1,9 @@
 ---
 name: graphic-designer
 description: Visual design, marketing collateral, brand assets. Illustrations, infographics, presentations, social graphics.
+capabilities:
+  - design-system: [visual-design, illustrations, infographics]
+  - marketing
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

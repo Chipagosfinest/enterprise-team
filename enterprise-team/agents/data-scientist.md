@@ -1,6 +1,10 @@
 ---
 name: data-scientist
 description: Builds ML models, predictive analytics, and statistical models. Expert in Python, scikit-learn, deep learning.
+capabilities:
+  - ml: [scikit-learn, deep-learning, statistical-modeling, predictive-analytics]
+  - data-pipeline
+  - backend: [python]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

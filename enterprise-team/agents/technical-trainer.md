@@ -1,6 +1,10 @@
 ---
 name: technical-trainer
 description: Training programs, learning materials, workshops. Instructional design, curriculum development, hands-on labs.
+capabilities:
+  - people: [technical-training, workshops, enablement]
+  - writing
+  - backend
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---

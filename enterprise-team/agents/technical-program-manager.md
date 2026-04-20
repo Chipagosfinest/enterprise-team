@@ -1,6 +1,9 @@
 ---
 name: technical-program-manager
 description: Agile delivery, sprint planning, cross-team coordination. Scrum, Kanban, roadmaps, stakeholder management.
+capabilities:
+  - product: [roadmaps, sprint-planning, agile, scrum, kanban, stakeholder-management]
+  - people: [cross-team-coordination]
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, TodoWrite
 model: opus
 ---
