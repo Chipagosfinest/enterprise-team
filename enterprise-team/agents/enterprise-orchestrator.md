@@ -25,16 +25,16 @@ Route to 2-4 specialists. Bug fix, audit, campaign, or investigation.
 
 | Department | Orchestrator | Specialists |
 |------------|--------------|-------------|
-| Engineering | `engineering-orchestrator` | Backend, frontend, mobile, fullstack, blockchain, ML, QA |
-| Infrastructure | `infrastructure-orchestrator` | DevOps, SRE, databases, systems admin |
-| Product | `product-orchestrator` | Product management, UX research, UI design, design strategy |
+| Engineering | `engineering-orchestrator` | Backend, frontend, mobile, fullstack, blockchain, ML, QA, docs, support, DevRel, TPM |
+| Infrastructure | `infrastructure-orchestrator` | DevOps, SRE, databases, systems admin, IT support |
+| Product | `product-orchestrator` | Product management, UX research, UI design, design strategy, business analysis, UI copy |
 | Data | `data-orchestrator` | Data engineering, analytics, data science |
 | Security | `security-orchestrator` | Security engineering, auditing, compliance |
-| Marketing | `marketing-orchestrator` | Growth, content, brand, social, SEO, email, PR, events, video, design |
-| Sales | `sales-orchestrator` | Account executives, sales engineers, business dev, partnerships, customer success |
+| Marketing | `marketing-orchestrator` | Growth, content, brand, social, SEO, email, PR, events, video, design, DevRel |
+| Sales | `sales-orchestrator` | Account executives, sales engineers, business dev, partnerships, customer success, consulting |
 | Finance | `finance-orchestrator` | Financial analysis, accounting, controlling, corporate development |
 | Legal | `legal-orchestrator` | Legal counsel, compliance, contracts, paralegal |
-| People | `people-orchestrator` | Recruiting, HR, compensation, talent development, payroll |
+| People | `people-orchestrator` | Recruiting, HR, compensation, talent development, training, payroll |
 
 ## Routing Logic
 

@@ -10,18 +10,11 @@ This repo is designed to behave like a routed specialist organization rather tha
 - Prefer 2-4 specialists for focused work.
 - Use a single specialist when the task is narrow and obvious.
 
-## Departments
+## Source Of Truth
 
-- Engineering: `engineering-orchestrator`
-- Infrastructure: `infrastructure-orchestrator`
-- Product: `product-orchestrator`
-- Data: `data-orchestrator`
-- Security: `security-orchestrator`
-- Marketing: `marketing-orchestrator`
-- Sales: `sales-orchestrator`
-- Finance: `finance-orchestrator`
-- Legal: `legal-orchestrator`
-- People: `people-orchestrator`
+- Use `agents/enterprise-orchestrator.md` as the canonical routing map.
+- Use the department orchestrators in `agents/` as the canonical team rosters.
+- Do not maintain a second roster here that can drift.
 
 ## Routing Rules
 
@@ -36,4 +29,4 @@ This repo is designed to behave like a routed specialist organization rather tha
 - Do not reference specialists that do not exist in `agents/`.
 - Report the selected mode, department, and specialist(s).
 - For implementation tasks, require evidence before claiming completion.
-- Use `reality-checker` as a final gate, not as default overhead for every tiny task.
+- For Sprint and Full work, require QA evidence before sign-off and use `reality-checker` for final integration validation.
